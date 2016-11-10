@@ -1,0 +1,22 @@
+{
+  "name": "r-blends",
+  "description": "Final Ruby/Rails/AngularJS project - color scheme generator/blender",
+  "main": "server.js",
+  "authors": [
+    "Rachel Beneroff <rbbeneroff@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/RBeneroff/R-Blends",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.3.2",
+    "angular": "^1.5.8",
+    "jquery": "^3.1.1"
+  }
+}
