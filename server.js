@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var logger = require('morgan');
 var app = express();
-var port = process.env.PORT || 4000
+var port = process.env.PORT || 3001
 var favicon = require('serve-favicon');
 // var bootstrap = require('bootstrap');
 
@@ -24,5 +24,5 @@ app.all('/*', function(req, res, next) {
 });
 
 app.listen(port, function() {
-  console.log('yo ----> 4000');
+  console.log('yo ----> 3001');
 });
