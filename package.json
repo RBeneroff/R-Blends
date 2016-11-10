@@ -1,0 +1,31 @@
+{
+  "name": "r-blends",
+  "version": "1.0.0",
+  "description": "Final Ruby/Rails/AngularJS project - color scheme generator/blender",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RBeneroff/R-Blends.git"
+  },
+  "engines": {
+    "node": "7.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RBeneroff/R-Blends/issues"
+  },
+  "homepage": "https://github.com/RBeneroff/R-Blends#readme",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.3.0"
+  }
+}
