@@ -26,7 +26,7 @@ API/Plugins:
 
   Controllers:
     UsersController (create, login, update, show, destroy, token, user_params)
-    SchemeController (create, destroy, show, scheme_params)
+    ColorSchemesController (create, destroy, show, scheme_params)
 
   Models:
     User Model
