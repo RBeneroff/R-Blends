@@ -1,12 +1,10 @@
 (function() {
   angular
-    .module('BlenderApp', [])
+    .module('BlenderApp')
     .controller('BlenderController', function($http, $state) {
-
-      var self = this;
-      var rootUrl = 'http://localhost:3001'
-
+        var self = this;
+        var rootUrl = 'http://localhost:3001'
 
 
-    }); //Controller
+    });
 })() //IIFE
