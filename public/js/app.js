@@ -5,6 +5,8 @@
       var self = this;
       var rootUrl = 'http://localhost:3000'
 
+// USER FUNCTIONS
+
       this.signup = function(user) {
         console.log(user, 'user');
         self.signed = user;
@@ -79,6 +81,20 @@
         })
       }
       this.newInformation = {};
+
+// COLOR SCHEME FUNCTIONS
+
+      this.showColorSchemes = function(id) {
+        console.log(id);
+        return $http({
+          url: `${rootUrl}/users/${id}/color_schemes`,
+          method: 'GET'
+        })
+        .then(function(response) {
+          console.log(response);
+          self.colorSchemes = response.data.colorSchemes;
+        })
+      }
 
     });
 })() //IIFE

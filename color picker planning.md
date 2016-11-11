@@ -1,10 +1,8 @@
 # Color Picker Planning & ERD - Ruby on Rails/AngularJS
 
-requirements:
-- at least 2 models
-- deployed
-- Angular front-end with full CRUD & RESTful routing
-- Authentication
+requirements not done:
+- Deployed
+- Delete in CRUD not done yet
 
 Extras to add:
 - create a drop down menu for login/signup
@@ -18,7 +16,7 @@ API/Plugins:
     CreateUsers
       t.string :username - validates (unique, must have)
       t.string :email_address - validates (proper email form, must have)
-      t.string :password
+      t.string :password_digest
     CreateColorScheme
       t.string :color_scheme_name
       t.string :color_one
@@ -63,3 +61,8 @@ How to use Spectrum:
 - $("#font_color").spectrum('get').toHexString();
 - color.toRgbString() work for me
 - in use: http://jsfiddle.net/bgrins/ctkY3/
+
+COMPLETE:
+- authentication (log in, sign up, log out)
+- CRUD - except for delete
+- at least 2 models
