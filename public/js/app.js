@@ -3,8 +3,8 @@
     .module('BlenderApp')
     .controller('BlenderController', function($http, $state) {
       var self = this;
-      // var rootUrl = 'http://localhost:3000'
-      var rootUrl = 'https://r-blends-backend.herokuapp.com'
+      var rootUrl = 'http://localhost:3000'
+      // var rootUrl = 'https://r-blends-backend.herokuapp.com'
 
 // USER FUNCTIONS
 
@@ -97,21 +97,26 @@
         })
       }
 
-      // var newColorScheme = '';
+// Get All Color Schemes From All Users
+      $http.get(`${rootUrl}/all_color_schemes`)
+      .then(function(response) {
+        console.log(response);
+        self.colorSchemes = response.data.colorSchemes;
+      })
+
       this.addColorScheme = function(newColorScheme, user_id) {
-        // newColorScheme = {
-        //   color_scheme_name: color_scheme_name,
-        //   color_one: color_one,
-        //   color_two: color_two,
-        //   color_three: color_three,
-        //   color_four: color_four,
-        //   color_five: color_five,
-        // }
         console.log('clicked');
         return $http({
           url: `${rootUrl}/users/${user_id}/color_schemes`,
           method: 'POST',
           data: {color_scheme: newColorScheme}
+        })
+        .then(function(response) {
+          return $http({
+            url: `${rootUrl}/all_color_schemes`,
+            method: 'POST',
+            data: {all_color_scheme: newColorScheme}
+          })
         })
         .then(function(response) {
           console.log(response);
@@ -141,3 +146,14 @@
 
     });
 })() //IIFE
+
+
+//unused code
+// newColorScheme = {
+//   color_scheme_name: color_scheme_name,
+//   color_one: color_one,
+//   color_two: color_two,
+//   color_three: color_three,
+//   color_four: color_four,
+//   color_five: color_five,
+// }
