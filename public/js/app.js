@@ -85,7 +85,7 @@
 // COLOR SCHEME FUNCTIONS
 
       this.showColorSchemes = function(id) {
-        console.log(id);
+        console.log('user id', id);
         return $http({
           url: `${rootUrl}/users/${id}/color_schemes`,
           method: 'GET'

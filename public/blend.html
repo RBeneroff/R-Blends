@@ -9,8 +9,18 @@
   <input id='color_scheme_name' ng-model='blend.newColorScheme.color_scheme_name'/>
   <button id='save-scheme' class="waves-effect waves-light light-blue lighten-3 btn btn" type='submit'>Save Color Scheme</button>
 </form>
-
 <!-- ng-click='blend.addColorScheme(colorScheme, blend.user.id)' -->
+<br><br><br>
+<button class="waves-effect waves-light light-blue lighten-3 btn btn" type='submit' ng-click="blend.showColorSchemes(blend.user.id)">Show Color Schemes</button>
+{{blend.user.colorSchemes}}
+<div class="showColorSchemes" ng-repeat='color in blend.colorSchemes track by $index'>
+  <div>{{color.color_scheme_name}}</div>
+  <div>{{color.color_one}}</div>
+  <div>{{color.color_two}}</div>
+  <div>{{color.color_three}}</div>
+  <div>{{color.color_four}}</div>
+  <div>{{color.color_five}}</div>
+</div>
 
 <!-- SPECTRUM FUNCTIONS -->
 
