@@ -1,12 +1,12 @@
 <h1>BLEND</h1>
 
-<form class="color_scheme_form" ng-submit="blend.addColorScheme(newColorScheme, blend.user.id)">
-  <input id='color_one' ng-model='user.color_one'/>
-  <input id='color_two' ng-model='user.color_two'/>
-  <input id='color_three' ng-model='user.color_three'/>
-  <input id='color_four' ng-model='user.color_four'/>
-  <input id='color_five' ng-model='user.color_five'/>
-  <input id='color_scheme_name' ng-model='user.color_scheme_name'/>
+<form class="color_scheme_form" ng-submit="blend.addColorScheme(blend.newColorScheme, blend.user.id)">
+  <input id='color_one' ng-model='blend.newColorScheme.color_one'/>
+  <input id='color_two' ng-model='blend.newColorScheme.color_two'/>
+  <input id='color_three' ng-model='blend.newColorScheme.color_three'/>
+  <input id='color_four' ng-model='blend.newColorScheme.color_four'/>
+  <input id='color_five' ng-model='blend.newColorScheme.color_five'/>
+  <input id='color_scheme_name' ng-model='blend.newColorScheme.color_scheme_name'/>
   <button id='save-scheme' class="waves-effect waves-light light-blue lighten-3 btn btn" type='submit'>Save Color Scheme</button>
 </form>
 
