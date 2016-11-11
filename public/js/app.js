@@ -96,7 +96,6 @@
         })
       }
 
-// color_scheme_name, color_one, color_two, color_three, color_four, color_five,
       // var newColorScheme = '';
       this.addColorScheme = function(newColorScheme, user_id) {
         // newColorScheme = {
@@ -112,7 +111,6 @@
           url: `${rootUrl}/users/${user_id}/color_schemes`,
           method: 'POST',
           data: {color_scheme: newColorScheme}
-          // data: {color_scheme_name : color_scheme_name, color_one : color_one, color_two : color_two, color_three : color_three, color_four : color_four, color_five : color_five}
         })
         .then(function(response) {
           console.log(response);
@@ -130,6 +128,21 @@
         })
       }
 
+      this.deleteColorScheme = function(user_id, color_scheme_id, index) {
+        console.log('user:', user_id, 'color_scheme_id:', color_scheme_id, 'index:', index);
+        self.colorSchemes.splice(index, 1);
+        return $http({
+          url: `${rootUrl}/users/${user_id}/color_schemes/${color_scheme_id}`,
+          method: 'DELETE'
+        })
+        .then(function(response) {
+          console.log(response);
+          return response;
+        })
+        .catch(function(err) {
+          console.log(err);
+        })
+      }
 
     });
 })() //IIFE
