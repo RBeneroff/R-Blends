@@ -6,10 +6,6 @@ requirements not done:
 Extras to add:
 - create a drop down menu for login/signup
 
-API/Plugins:
-- http://bgrins.github.io/spectrum/?color=%23000000&color2=%233355cc&color3=%237954e4#why-devtools
-- https://github.com/bgrins/spectrum
-
 ## ERD:
   Schema:
     CreateUsers
@@ -61,7 +57,7 @@ How to use Spectrum:
 - color.toRgbString() work for me
 - in use: http://jsfiddle.net/bgrins/ctkY3/
 
-COMPLETE:
+COMPLETE: basic MVP done
 - authentication (log in, sign up, log out)
 - CRUD
 - at least 2 models
