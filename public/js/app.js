@@ -34,10 +34,10 @@
           data: {user : user}
         })
         .then(function(response) {
-          if (response.data.status === 401) {
-            self.user.password = '';
-          }
-          console.log(response);
+          // if (response.data.status === 401) {
+          //   self.user.password = '';
+          // }
+          console.log(response, user, 'this is the current user');
           self.user = response.data.user;
           self.id = response.data.user.id;
           console.log('token ---->', response.data.token);
@@ -55,14 +55,14 @@
         self.users = response.data.users;
       })
 
-      this.logout = function(user) {
-        console.log('logging out ---->', user);
-        self.user = null;
-        self.success = null;
-        self.repeatText = "";
-        localStorage.removeItem('token');
-        $state.go('home', {url: '/'});
-      }
+      // this.logout = function(user) {
+      //   console.log('logging out ---->', user);
+      //   self.user = null;
+      //   self.success = null;
+      //   self.repeatText = "";
+      //   localStorage.removeItem('token');
+      //   $state.go('home', {url: '/'});
+      // }
 
 
 
