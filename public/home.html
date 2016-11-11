@@ -1,1 +1,53 @@
 <h1>HOME</h1>
+
+<input id='showPalette'/>
+
+<div class='box' style='{{showPalette}}'></div>
+
+<input type='color' name='color' />
+<input type='color' name='color2' value='#3355cc' />
+<br><br>
+<input id="colorpicker" style="display:none;" value="#000" />
+
+<script type="text/javascript">
+$(document).ready(function() {
+$('#colorpicker').spectrum({
+  showInput: true,
+  preferredFormat: "hex"
+});
+$('.sp-container .sp-input').each(function() {
+    this.defaultValue = this.value;
+  });
+});
+</script>
+
+<script>
+$("#showPalette").spectrum({
+    showPalette: true,
+    palette: [
+        ['black', 'white', 'blanchedalmond'],
+        ['rgb(255, 128, 0);', 'hsv 100 70 50', 'lightyellow']
+    ]
+});
+</script>
+
+<input id='textColor'>COLORS</input>
+
+<input id='textColor'/>
+
+<script>
+$("#textColor").spectrum({
+    showPalette: true,
+    color: calEvent.textColor,
+    palette: [
+        ['000000', 'FFFFFF', 'FFFF77'],
+        ['008000', 'C0C0C0', 'AE0000']
+    ],
+    change: function(color) {
+        $("#eventPreview").css( "color", color.toHexString() );
+    },
+    hide: function(color) {
+       $("#eventPreview").css( "color", color.toHexString() );
+    }
+});
+</script>
