@@ -3,7 +3,8 @@
     .module('BlenderApp')
     .controller('BlenderController', function($http, $state) {
       var self = this;
-      var rootUrl = 'http://localhost:3000'
+      // var rootUrl = 'http://localhost:3000'
+      var rootUrl = 'https://r-blends-backend.herokuapp.com'
 
 // USER FUNCTIONS
 
