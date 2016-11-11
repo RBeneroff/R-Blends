@@ -3,6 +3,9 @@
 requirements not done:
 - Deployed
 
+Working on:
+- being able to delete from all_color_schemes when deleting from users color scheme
+
 Extras to add:
 - create a drop down menu for login/signup
 

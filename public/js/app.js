@@ -85,6 +85,13 @@
 
 // COLOR SCHEME FUNCTIONS
 
+// Get All Color Schemes From All Users
+      $http.get(`${rootUrl}/all_color_schemes`)
+      .then(function(response) {
+        console.log(response, 'ALL COLOR SCHEMES');
+        self.allColorSchemes = response.data.allColorSchemes;
+      })
+
       this.showColorSchemes = function(id) {
         console.log('user id', id);
         return $http({
@@ -97,12 +104,17 @@
         })
       }
 
-// Get All Color Schemes From All Users
-      $http.get(`${rootUrl}/all_color_schemes`)
-      .then(function(response) {
-        console.log(response, 'ALL COLOR SCHEMES');
-        self.colorSchemes = response.data.colorSchemes;
-      })
+      this.showAllColorSchemes = function(id) {
+        console.log('allColorSchemes', id);
+        return $http({
+          url: `${rootUrl}/all_color_schemes`,
+          method: 'GET'
+        })
+        .then(function(response) {
+          console.log(response, 'all schemes');
+          self.allColorSchemes = response.data.allColorSchemes;
+        })
+      }
 
       this.addColorScheme = function(newColorScheme, user_id) {
         console.log('clicked');

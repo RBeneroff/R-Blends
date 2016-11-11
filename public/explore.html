@@ -1,3 +1,14 @@
 <h1>Explore</h1>
 
 <h4>All Users</h4>
+
+
+<button type='submit' class="waves-effect waves-light light-blue lighten-3 btn btn" ng-click="blend.showAllColorSchemes(blend.id)">Show Color Schemes</div>
+<div ng-repeat='colors in blend.allColorSchemes track by $index'>
+  <div>{{colors.color_scheme_name}}</button>
+  <div>{{colors.color_one}}</div>
+  <div>{{colors.color_two}}</div>
+  <div>{{colors.color_three}}</div>
+  <div>{{colors.color_four}}</div>
+  <div>{{colors.color_five}}</div>
+</div>
