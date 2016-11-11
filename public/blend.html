@@ -1,9 +1,41 @@
 <h1>BLEND</h1>
 
-<input id='colorpicker' />
+<form class="color_scheme_form" ng-submit="blend.addColorScheme(newColorScheme, blend.user.id)">
+  <input id='color_one' ng-model='user.color_one'/>
+  <input id='color_two' ng-model='user.color_two'/>
+  <input id='color_three' ng-model='user.color_three'/>
+  <input id='color_four' ng-model='user.color_four'/>
+  <input id='color_five' ng-model='user.color_five'/>
+  <input id='color_scheme_name' ng-model='user.color_scheme_name'/>
+  <button id='save-scheme' class="waves-effect waves-light light-blue lighten-3 btn btn" type='submit'>Save Color Scheme</button>
+</form>
+
+<!-- ng-click='blend.addColorScheme(colorScheme, blend.user.id)' -->
+
+<!-- SPECTRUM FUNCTIONS -->
 
 <script>
-$("#colorpicker").spectrum({
+$("#color_one").spectrum({
+    color: "#f00"
+});
+</script>
+<script>
+$("#color_two").spectrum({
+    color: "#f00"
+});
+</script>
+<script>
+$("#color_three").spectrum({
+    color: "#f00"
+});
+</script>
+<script>
+$("#color_four").spectrum({
+    color: "#f00"
+});
+</script>
+<script>
+$("#color_five").spectrum({
     color: "#f00"
 });
 </script>

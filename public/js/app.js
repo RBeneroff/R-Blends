@@ -96,5 +96,40 @@
         })
       }
 
+// color_scheme_name, color_one, color_two, color_three, color_four, color_five,
+      var newColorScheme = '';
+      this.addColorScheme = function(newColorScheme, user_id) {
+        newColorScheme = {
+          color_scheme_name: color_scheme_name,
+          color_one: color_one,
+          color_two: color_two,
+          color_three: color_three,
+          color_four: color_four,
+          color_five: color_five,
+        }
+        console.log('clicked');
+        return $http({
+          url: `${rootUrl}/users/${user_id}/color_schemes`,
+          method: 'POST',
+          data: {color_scheme: newColorScheme}
+          // data: {color_scheme_name : color_scheme_name, color_one : color_one, color_two : color_two, color_three : color_three, color_four : color_four, color_five : color_five}
+        })
+        .then(function(response) {
+          console.log(response);
+          console.log('newColorScheme ---->', newColorScheme)
+          // return response;
+        })
+        .then(function(response) {
+          // for live update -- add later
+          // if (response.data.status === 200) {
+            // self.colorScheme.push(newColorScheme);
+          // }
+        })
+        .catch(function(err) {
+          console.log(err);
+        })
+      }
+
+
     });
 })() //IIFE
