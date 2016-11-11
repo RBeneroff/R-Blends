@@ -47,10 +47,15 @@ Pages:
 - Explore (page with lots of different color schemes)
 - Blend (your user's page -- where you can mix/match colors)
   - can save your color schemes
+- Settings - update password and email address
 
 Reaches:
 - have the explore page be the color schemes that other user's put together
 - be able to change the colors of the website when choosing colors
+- in Settings:
+  - be able to create your own customized color scheme for the website
+  - upload your own photo
+  - track your history
 
 How to use Spectrum:
 - var value = $("#font_color").val();

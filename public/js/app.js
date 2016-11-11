@@ -64,7 +64,21 @@
         $state.go('home', {url: '/'});
       }
 
-
+      this.updateSettings = function(user_id, newInformation) {
+        return $http({
+          url: `${rootUrl}/users/${user_id}`,
+          method: 'PATCH',
+          data: {update : newInformation}
+        })
+        .then(function(response) {
+          self.newInformation = {};
+          console.log(response);
+        })
+        .catch(function(err) {
+          console.log(err);
+        })
+      }
+      this.newInformation = {};
 
     });
 })() //IIFE
