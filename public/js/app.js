@@ -54,7 +54,7 @@
 
       $http.get(`${rootUrl}/users`)
       .then(function(response) {
-        console.log(response);
+        console.log(response, 'ALL USERS');
         self.users = response.data.users;
       })
 
@@ -100,7 +100,7 @@
 // Get All Color Schemes From All Users
       $http.get(`${rootUrl}/all_color_schemes`)
       .then(function(response) {
-        console.log(response);
+        console.log(response, 'ALL COLOR SCHEMES');
         self.colorSchemes = response.data.colorSchemes;
       })
 
@@ -128,13 +128,19 @@
         })
       }
 
-      this.deleteColorScheme = function(user_id, color_scheme_id, index) {
-        console.log('user:', user_id, 'color_scheme_id:', color_scheme_id, 'index:', index);
+      this.deleteColorScheme = function(user_id, color_scheme_id, index, all_color_scheme_id) {
+        console.log('user:', user_id, 'color_scheme_id:', color_scheme_id, 'index:', index, 'all_color_scheme_id', all_color_scheme_id);
         self.colorSchemes.splice(index, 1);
         return $http({
           url: `${rootUrl}/users/${user_id}/color_schemes/${color_scheme_id}`,
           method: 'DELETE'
         })
+        // .then(function(response) {
+        //   return $http({
+        //     url: `${rootUrl}/all_color_schemes/${all_color_scheme_id}`,
+        //     method: 'DELETE',
+        //   })
+        // })
         .then(function(response) {
           console.log(response);
           return response;
