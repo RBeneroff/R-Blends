@@ -115,13 +115,7 @@
         .then(function(response) {
           console.log(response);
           console.log('newColorScheme ---->', newColorScheme)
-          // return response;
-        })
-        .then(function(response) {
-          // for live update -- add later
-          // if (response.data.status === 200) {
-            // self.colorScheme.push(newColorScheme);
-          // }
+          self.colorSchemes.push(newColorScheme);
         })
         .catch(function(err) {
           console.log(err);

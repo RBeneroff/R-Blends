@@ -2,7 +2,6 @@
 
 requirements not done:
 - Deployed
-- Delete in Postman working - not on site yet
 
 Extras to add:
 - create a drop down menu for login/signup
@@ -64,5 +63,5 @@ How to use Spectrum:
 
 COMPLETE:
 - authentication (log in, sign up, log out)
-- CRUD - fully functional in Postman though
+- CRUD
 - at least 2 models
