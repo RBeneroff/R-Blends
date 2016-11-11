@@ -55,14 +55,14 @@
         self.users = response.data.users;
       })
 
-      // this.logout = function(user) {
-      //   console.log('logging out ---->', user);
-      //   self.user = null;
-      //   self.success = null;
-      //   self.repeatText = "";
-      //   localStorage.removeItem('token');
-      //   $state.go('home', {url: '/'});
-      // }
+      this.logout = function(user) {
+        console.log('logging out ---->', user);
+        self.user = null;
+        self.success = null;
+        self.repeatText = "";
+        localStorage.removeItem('token');
+        $state.go('home', {url: '/'});
+      }
 
 
 

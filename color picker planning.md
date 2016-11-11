@@ -6,6 +6,9 @@ requirements:
 - Angular front-end with full CRUD & RESTful routing
 - Authentication
 
+Extras to add:
+- create a drop down menu for login/signup
+
 API/Plugins:
 - http://bgrins.github.io/spectrum/?color=%23000000&color2=%233355cc&color3=%237954e4#why-devtools
 - https://github.com/bgrins/spectrum
