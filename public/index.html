@@ -21,16 +21,23 @@
     <div ng-controller='BlenderController as blend'>
       <header>
         <div class="navbar-fixed">
+          <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> -->
+          <ul id="dropdown1" class="dropdown-content">
+            <li><a class='nav-link' ui-sref='login' ui-sref-active='active' ng-hide='blend.user'>Log In</a></li>
+            <li><a class='nav-link' ui-sref='signup' ui-sref-active='active' ng-hide='blend.user'>Sign Up</a></li>
+          </ul>
+          <ul id="dropdown2" class="dropdown-content">
+            <li><a class='nav-link' ui-sref='settings' ui-sref-active='active' ng-show='blend.user'>Settings</a></li>
+            <li><a class='nav-link' ui-sref='logout' ui-sref-active='active' ng-click='blend.logout(blend.user)'>Log Out</a></li>
+          </ul>
           <nav class='light-blue darken-3'>
             <div class="nav-wrapper">
               <a ui-sref='home' class="brand-logo left">R.Blends</a>
               <ul class="right">
                 <li><a class='nav-link' ui-sref='explore' ui-sref-active='active'>Explore</a></li>
                 <li ng-show='blend.user'><a class='nav-link' ui-sref='blend' ui-sref-active='active'>Blend</a></li>
-                <li ng-hide='blend.user'><a class='nav-link' ui-sref='login' ui-sref-active='active'>Log In</a></li>
-                <li ng-hide='blend.user'><a class='nav-link' ui-sref='signup' ui-sref-active='active'>Sign Up</a></li>
-                <li ng-show='blend.user'><a class='nav-link' ui-sref='settings' ui-sref-active='active'>Settings</a></li>
-                <li ng-show='blend.user'><a class='nav-link' ng-click='blend.logout(blend.user)'>Log Out</a></li>
+                <li ng-hide='blend.user'><a class="dropdown-button" href="#!" data-activates="dropdown1">Join<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li ng-show='blend.user'><a class="dropdown-button" href="#!" data-activates="dropdown2">{{blend.user.username}}<i class="material-icons right">arrow_drop_down</i></a></li>
               </ul>
             </div>
           </nav>
@@ -40,3 +47,9 @@
     </div>
   </body>
 </html>
+
+<!-- UNUSED CODE  -->
+<!-- <li ng-hide='blend.user'><a class='nav-link' ui-sref='login' ui-sref-active='active'>Log In</a></li> -->
+<!-- <li ng-hide='blend.user'><a class='nav-link' ui-sref='signup' ui-sref-active='active'>Sign Up</a></li> -->
+<!-- <li ng-show='blend.user'><a class='nav-link' ui-sref='settings' ui-sref-active='active'>Settings</a></li> -->
+<!-- <li ng-show='blend.user'><a class='nav-link' ng-click='blend.logout(blend.user)'>Log Out</a></li> -->

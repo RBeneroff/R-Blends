@@ -52,6 +52,7 @@ Reaches:
   - be able to create your own customized color scheme for the website
   - upload your own photo
   - track your history
+- add an invite friends button to the user's dropdown menu
 
 How to use Spectrum:
 - var value = $("#font_color").val();
