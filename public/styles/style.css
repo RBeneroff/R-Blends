@@ -1,3 +1,5 @@
+/*BASE CSS*/
+
 * {
   margin: 0;
 }
@@ -13,6 +15,44 @@ body {
 
 p {
   font-family: Arial;
+}
+
+nav {
+  font-family: Caviar Dreams;
+  color: black;
+}
+
+#color,
+#color2,
+#color3,
+#color4 {
+  color: black;
+}
+
+#color:hover,
+#color2:hover,
+#color3:hover,
+#color4:hover {
+  color: #D6EEFF;
+  background-color: white;
+}
+
+.nav-link:hover {
+  background-color: white;
+  color: #D6EEFF;
+}
+
+/*HOME PAGE*/
+
+.triangle,
+.triangle2,
+.text,
+.pixel,
+.pixel2,
+.pixel3,
+.pixel4,
+.pixel5 {
+  cursor: pointer;
 }
 
 .home,
@@ -125,46 +165,23 @@ p {
   border: 1px solid black;
 }*/
 
-nav {
-  font-family: Caviar Dreams;
-  color: black;
-}
-
-#color,
-#color2,
-#color3,
-#color4 {
-  color: black;
-}
-
-#color:hover,
-#color2:hover,
-#color3:hover,
-#color4:hover {
-  color: #D6EEFF;
-  background-color: white;
-}
-
-.nav-link:hover {
-  background-color: white;
-  color: #D6EEFF;
-}
-
 .h-buttons {
   background-color: white;
 }
 
-/*i.icon-blue {
-  color: blue;
+/*EXPLORE PAGE */
+
+.e-buttons {
+  background-color: ivory;
+  text-align: center;
 }
 
-.material-icons.active {
-      color: #353B40;
-    }*/
+.explore-container {
+  padding: 10vh 0 10vh 0;
+  text-align: center;
+}
 
-/*i.icon-blue.active {
-  color: #353B40;
-}*/
+/*FORM SPECIFIC CSS*/
 
 /*.input-field:focus,*/
 #input:focus,
@@ -200,6 +217,20 @@ nav {
 #label6 {
   color: gray;
 }
+
+/*i.icon-blue {
+  color: blue;
+}
+
+.material-icons.active {
+      color: #353B40;
+    }*/
+
+/*i.icon-blue.active {
+  color: #353B40;
+}*/
+
+/*SETTINGS PAGE*/
 
 .footer {
   position: absolute;
