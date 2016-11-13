@@ -2,20 +2,34 @@
   margin: 0;
 }
 
+@font-face {
+  font-family: 'Caviar Dreams';
+  src: url('CaviarDreams.ttf') format('opentype');
+}
+
+body {
+  font-family: Caviar Dreams;
+}
+
+p {
+  font-family: Arial;
+}
+
 .home {
   text-align: center;
 }
 
 .text {
   text-align: center;
+  /*font-family: Caviar Dreams;*/
 }
 
 #heading {
   /*background: black;*/
   /*padding: 5vh;*/
   /*color: white;*/
-}
 
+}
 
 .box-container {
   display: flex;
@@ -50,6 +64,11 @@
   border: 1px solid black;
 }*/
 
+nav {
+  font-family: Caviar Dreams;
+  color: black;
+}
+
 #color,
 #color2,
 #color3,
@@ -64,10 +83,6 @@
   color: red;
   background-color: white;
 }
-
-/*.nav-link {
-  color: black;
-}*/
 
 .nav-link:hover {
   background-color: white;
