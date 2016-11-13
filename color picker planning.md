@@ -1,8 +1,5 @@
 # Color Picker Planning & ERD - Ruby on Rails/AngularJS
 
-requirements not done:
-- Deployed
-
 Working on:
 - being able to delete from all_color_schemes when deleting from users color scheme
 
@@ -68,3 +65,4 @@ COMPLETE: basic MVP done
 - authentication (log in, sign up, log out)
 - CRUD
 - at least 2 models
+- deployed 

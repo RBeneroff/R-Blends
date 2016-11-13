@@ -1,11 +1,21 @@
-<h2>Settings</h2>
+<br><br><br>
 
+<div class='container'>
+<h4>Settings</h4>
+
+<div class="row">
 <form class="settings" ng-submit='blend.updateSettings(blend.user.id, blend.newInformation)'>
-  <label for="email_address">New Email</label>
-  <input type="text" name="email" placeholder="{{blend.user.email_address}}" ng-model='blend.newInformation.email_address' class='validate'>
-  <br><br>
-  <label for="password">New Password</label>
-  <input type="password" class="validate" ng-model="blend.newInformation.password">
+  <div class="input-field col s12 m6">
+    <i class="prefix small material-icons">email</i><input type="text" class="validate" name="email" ng-model='blend.newInformation.email_address' class='validate'>
+    <label for="email_address">New Email</label>
+  </div>
 
-  <button class="waves-effect waves-light light-blue lighten-3 btn" type="submit" name="action">Update Settings</button>
+  <div class="input-field col s12 m6">
+    <i class="prefix small material-icons">lock_outline</i><input type="password" class="validate" ng-model="blend.newInformation.password">
+    <label for="password">New Password</label>
+  </div>
+  <button class="btn waves-effect waves-light blue-grey lighten-3" type="submit" name="action">Update Settings</button>
 </form>
+</div>
+
+</div>

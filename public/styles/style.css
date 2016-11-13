@@ -4,3 +4,27 @@
   height: 200px;
   border: 1px solid black;
 }
+
+#color,
+#color2,
+#color3,
+#color4 {
+  color: black;
+}
+
+#color:hover,
+#color2:hover,
+#color3:hover,
+#color4:hover {
+  color: red;
+  background-color: white;
+}
+
+/*.nav-link {
+  color: black;
+}*/
+
+.nav-link:hover {
+  background-color: white;
+  color: red;
+}
