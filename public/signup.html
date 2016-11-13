@@ -1,5 +1,13 @@
-<br><br><br>
 
+<div class='box-container'>
+<div class="pixel" style="background-color:#EAFEFF"></div>
+<div class="pixel" style="background-color:#AFBEBF"></div>
+<div class="pixel" style="background-color:#757F7F"></div>
+<div class="pixel" style="background-color:#3A3F40"></div>
+<div class="pixel" style="background-color:#D3E5E5"></div>
+</div>
+
+<br><br><br>
 <div class='container'>
 <h4>Sign Up</h4>
 
@@ -7,16 +15,16 @@
     <form class="col s12" ng-submit="blend.signup(user)">
       <div class="row">
         <div class="input-field col s12">
-          <i class="prefix small material-icons">email</i><input id="input2" id="email" type="email" class="validate" ng-model="user.email_address">
-          <label id='label4' for="email">Please Enter Email Address</label>
+          <i class="prefix small material-icons grey-text text-grey darken-4">email</i><input id="input2" id="email" type="email" class="validate" ng-model="user.email_address">
+          <label id='label2' for="email">Please Enter Email Address</label>
         </div>
         <div class="input-field col s12 m6">
-          <i class="prefix small material-icons">perm_identity</i><input type="text" class="validate" ng-model="user.username" id='input_text' length="10">
-          <label for="input_text">Create A Username</label>
+          <i class="prefix small material-icons grey-text text-grey darken-4">perm_identity</i><input type="text" class="validate" ng-model="user.username" id='input3' id='input_text' length="10">
+          <label id='label2' for="input_text">Create A Username</label>
         </div>
         <div class="input-field col s12 m6">
-          <i class="prefix small material-icons">lock_outline</i><input type="password" class="validate" ng-model="user.password">
-          <label for="password">Create A Password</label>
+          <i class="prefix small material-icons grey-text text-grey darken-4">lock_outline</i><input id='input4' type="password" class="validate" ng-model="user.password">
+          <label id='label4' for="password">Create A Password</label>
         </div>
       </div>
       <button class="btn waves-effect waves-light blue-grey lighten-3" type="submit" name="action">Sign Up</button>
@@ -28,4 +36,13 @@
   <h5>Already A Member?</h5>
   <button class="btn waves-effect waves-light blue-grey lighten-3" ui-sref='login'>Log In</button>
 
+</div>
+
+<br><br><br><br>
+<div class='box-container'>
+  <div class="pixel" style="background-color:#D3E5E5"></div>
+  <div class="pixel" style="background-color:#3A3F40"></div>
+  <div class="pixel" style="background-color:#757F7F"></div>
+  <div class="pixel" style="background-color:#AFBEBF"></div>
+  <div class="pixel" style="background-color:#EAFEFF"></div>
 </div>

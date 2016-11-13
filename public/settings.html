@@ -1,3 +1,12 @@
+
+<div class='box-container'>
+<div class="pixel" style="background-color:#EAFEFF"></div>
+<div class="pixel" style="background-color:#AFBEBF"></div>
+<div class="pixel" style="background-color:#757F7F"></div>
+<div class="pixel" style="background-color:#3A3F40"></div>
+<div class="pixel" style="background-color:#D3E5E5"></div>
+</div>
+
 <br><br><br>
 
 <div class='container'>
@@ -6,16 +15,32 @@
 <div class="row">
 <form class="settings" ng-submit='blend.updateSettings(blend.user.id, blend.newInformation)'>
   <div class="input-field col s12 m6">
-    <i class="prefix small material-icons">email</i><input type="text" class="validate" name="email" ng-model='blend.newInformation.email_address' class='validate'>
-    <label for="email_address">New Email</label>
+    <i class="prefix small material-icons grey-text text-grey darken-4">email</i><input id='input5' type="text" class="validate" name="email" ng-model='blend.newInformation.email_address' class='validate'>
+    <label id='label5' for="email_address">New Email</label>
   </div>
 
   <div class="input-field col s12 m6">
-    <i class="prefix small material-icons">lock_outline</i><input type="password" class="validate" ng-model="blend.newInformation.password">
-    <label for="password">New Password</label>
+    <i class="prefix small material-icons grey-text text-grey darken-4">lock_outline</i><input id='input6' type="password" class="validate" ng-model="blend.newInformation.password">
+    <label id='label6' for="password">New Password</label>
   </div>
   <button class="btn waves-effect waves-light blue-grey lighten-3" type="submit" name="action">Update Settings</button>
 </form>
 </div>
 
+<!-- <br><br><br> -->
+<!-- <h5>Invite your friends!</h5>
+<p>Liking this app? Invite your friends!</p>
+<br>
+<button class="btn waves-effect waves-light blue-grey lighten-3" ui-sref='signup'>Become A Member</button> -->
+
+</div>
+
+<br><br><br>
+
+<div class='box-container footer'>
+  <div class="pixel" style="background-color:#D3E5E5"></div>
+  <div class="pixel" style="background-color:#3A3F40"></div>
+  <div class="pixel" style="background-color:#757F7F"></div>
+  <div class="pixel" style="background-color:#AFBEBF"></div>
+  <div class="pixel" style="background-color:#EAFEFF"></div>
 </div>

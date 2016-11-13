@@ -15,7 +15,8 @@ p {
   font-family: Arial;
 }
 
-.home {
+.home,
+.explore {
   text-align: center;
   background: ivory;
 }
@@ -140,15 +141,70 @@ nav {
 #color2:hover,
 #color3:hover,
 #color4:hover {
-  color: red;
+  color: #D6EEFF;
   background-color: white;
 }
 
 .nav-link:hover {
   background-color: white;
-  color: red;
+  color: #D6EEFF;
 }
 
 .h-buttons {
   background-color: white;
+}
+
+/*i.icon-blue {
+  color: blue;
+}
+
+.material-icons.active {
+      color: #353B40;
+    }*/
+
+/*i.icon-blue.active {
+  color: #353B40;
+}*/
+
+/*.input-field:focus,*/
+#input:focus,
+#input1:focus,
+#input2:focus,
+#input3:focus,
+#input4:focus,
+#input5:focus,
+#input6:focus {
+  border-bottom: 1px solid #353B40;
+  box-shadow: 0 1px 0 0 #353B40;
+  color: #353B40;
+}
+
+#input,
+#input1,
+#input2,
+#input3,
+#input4,
+#input5,
+#input6 {
+  border-bottom: 1px solid gray;
+  box-shadow: 0 1px 0 0 gray;
+  color: gray;
+}
+
+#label,
+#label2,
+#label3,
+#label1,
+#label4,
+#label5,
+#label6 {
+  color: gray;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 75px;
+  width: 100%;
 }

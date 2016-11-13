@@ -26,16 +26,6 @@
 <div class="pixel4" style="background-color:#FFFCAD"></div>
 <div class="pixel5" style="background-color:#C4FFD9"></div>
 <div class="pixel" style="background-color:#B0E5C3"></div>
-<!-- <div class="pixel" style="background-color:#FFFCAD"></div>
-<div class="pixel" style="background-color:#BFBD82"></div>
-<div class="pixel" style="background-color:#7F7E56"></div>
-<div class="pixel" style="background-color:#403F2B"></div>
-<div class="pixel" style="background-color:#E5E39B"></div>
-<div class="pixel" style="background-color:#C4FFD9"></div>
-<div class="pixel" style="background-color:#93BFA3"></div>
-<div class="pixel" style="background-color:#627F6C"></div>
-<div class="pixel" style="background-color:#314036"></div>
-<div class="pixel" style="background-color:#B0E5C3"></div> -->
 </div>
 
 <div class='h-buttons'>
@@ -46,10 +36,25 @@
 <br><br><br>
 </div>
 
+<div class='box-container'>
+<div class="pixel" style="background-color:#B0E5C3"></div>
+<div class="pixel5" style="background-color:#C4FFD9"></div>
+<div class="pixel4" style="background-color:#FFFCAD"></div>
+
+<div class="pixel3" style="background-color:#BF948E"></div>
+<div class="pixel2" style="background-color:#FFC5BE"></div>
+
+<div class="pixel" style="background-color:#D3E5E5"></div>
+<div class="pixel" style="background-color:#3A3F40"></div>
+<div class="pixel" style="background-color:#757F7F"></div>
+<div class="pixel" style="background-color:#AFBEBF"></div>
+<div class="pixel" style="background-color:#EAFEFF"></div>
+</div>
+
 <script>
-var color = "#f00";
+var color = "#D6EEFF";
 $("#colorpicker").spectrum({ //spectrum config
-    color: "#f00",
+    color: "#D6EEFF",
     showPalette: true,
     showInput: true,
     showAlpha: true,
@@ -72,6 +77,9 @@ $('.pixel, .pixel2, .pixel3, .pixel4, .pixel5').click(function(){
 });
 $('.triangle').click(function(){
     $(this).css('border-top' , '280px solid' + color);
+});
+$('.triangle2').click(function(){
+    $(this).css('border-bottom' , '200px solid' + color);
 });
 // $('.home').click(function(){
 //     $(this).css('background-color' , color);
