@@ -17,6 +17,7 @@ p {
 
 .home {
   text-align: center;
+  background: ivory;
 }
 
 .text {
@@ -28,8 +29,46 @@ p {
   /*background: black;*/
   /*padding: 5vh;*/
   /*color: white;*/
-
+  margin-top: -30vh;
+  margin-bottom: -20vh;
+  /*background-color: ivory;*/
 }
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 240px solid transparent;
+  border-right: 240px solid transparent;
+  border-top: 280px solid #D6EEFF;
+  z-index: -1;
+}
+
+.triangle2 {
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 200px solid #D6EEFF;
+  z-index: -1;
+  margin-left: 60%;
+  /*margin-top: -30vh;*/
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  z-index: -1;
+}
+
+/*.triangle3 {
+  width: 0;
+  height: 0;
+  border-top: 180px solid transparent;
+  border-bottom: 180px solid transparent;
+  border-right: 100px solid #D6EEFF;
+  margin-top: -10vh;
+}*/
 
 .box-container {
   display: flex;
@@ -46,15 +85,36 @@ p {
 }
 
 .pixel {
-  /*flex: 9;*/
-    /*width:250px;*/
     height:75px;
-    border : 1px solid black;
-    /*display: flex;*/
+    /*border : 1px solid black;*/
     flex-basis: 20%;
     justify-content: center;
-    /*background-color: #0E615C;*/
-  }
+}
+
+.pixel2 {
+    height:150px;
+    /*border : 1px solid black;*/
+    flex-basis: 45%;
+    justify-content: center;
+}
+.pixel3 {
+    height:150px;
+    /*border : 1px solid black;*/
+    flex-basis: 55%;
+    justify-content: center;
+}
+
+.pixel4 {
+    height:75px;
+    /*border : 1px solid black;*/
+    flex-basis: 30%;
+    justify-content: center;
+}
+.pixel5 {
+    height:75px;
+    /*border : 1px solid black;*/
+    flex-basis: 50%;
+    justify-content: center;
 }
 
 /*.box {
@@ -87,4 +147,8 @@ nav {
 .nav-link:hover {
   background-color: white;
   color: red;
+}
+
+.h-buttons {
+  background-color: white;
 }
