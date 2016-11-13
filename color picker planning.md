@@ -2,7 +2,7 @@
 
 Working on:
 - being able to delete from all_color_schemes when deleting from users color scheme
-- customization of color boxes
+- home screen can completely change colors
 - refresh color scheme form after submission
 
 Bugs to fix:
@@ -38,7 +38,7 @@ Bugs to fix:
     Scheme belongs_to :user
 
 Pages:
-- Home
+- Home - can choose any color and change anything on the site
 - Log In & Sign Up page (two separate pages)
 - Explore (page with lots of different color schemes)
 - Blend (your user's page -- where you can mix/match colors)

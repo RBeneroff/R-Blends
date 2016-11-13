@@ -1,12 +1,80 @@
-<h1>HOME</h1>
+<div class='home'>
 
-<input id='showPalette'/>
+<h2 class='text' id='heading'>Welcome to R-Blends</h2>
 
-<div class='box' style='{{showPalette}}'></div>
+<p class='text'>Pick a color and click away!</p>
+<input id='colorpicker' />
+<br><br><br>
+<div class='box-container'>
+<div class="pixel" style="background-color:#EAFEFF"></div>
+<div class="pixel" style="background-color:#AFBEBF"></div>
+<div class="pixel" style="background-color:#757F7F"></div>
+<div class="pixel" style="background-color:#3A3F40"></div>
+<div class="pixel" style="background-color:#D3E5E5"></div>
+<div class="pixel" style="background-color:#FFC5BE"></div>
+<div class="pixel" style="background-color:#BF948E"></div>
+<div class="pixel" style="background-color:#7F635F"></div>
+<div class="pixel" style="background-color:#40312F"></div>
+<div class="pixel" style="background-color:#E5B2AB"></div>
+<div class="pixel" style="background-color:#FFFCAD"></div>
+<div class="pixel" style="background-color:#BFBD82"></div>
+<div class="pixel" style="background-color:#7F7E56"></div>
+<div class="pixel" style="background-color:#403F2B"></div>
+<div class="pixel" style="background-color:#E5E39B"></div>
+<div class="pixel" style="background-color:#C4FFD9"></div>
+<div class="pixel" style="background-color:#93BFA3"></div>
+<div class="pixel" style="background-color:#627F6C"></div>
+<div class="pixel" style="background-color:#314036"></div>
+<div class="pixel" style="background-color:#B0E5C3"></div>
+</div>
 
-<input type='color' name='color' />
-<input type='color' name='color2' value='#3355cc' />
-<br><br>
+<br>
+
+<h4 class='text'>Begin Blending:</h4>
+<button class="btn waves-effect waves-light blue-grey lighten-3" ui-sref='login'>Log In</button>
+<button class="btn waves-effect waves-light blue-grey lighten-3" ui-sref='signup'>Sign Up</button>
+
+<script>
+var color = "#f00";
+$("#colorpicker").spectrum({ //spectrum config
+    color: "#f00",
+    showPalette: true,
+    showInput: true,
+    showAlpha: true,
+    chooseText: "Choose",
+    preferredFormat: "hex",
+    cancelText: "X",
+    togglePaletteOnly: true,
+    showPaletteOnly: true,
+    togglePaletteMoreText: "More Colors...",
+    togglePaletteLessText: "Less Colors...",
+    palette: [
+            //color palettes for Spectrum
+    ],
+    change: function(colorSelected, changeColor, changeText) {
+        color = colorSelected.toHexString();
+    }
+});
+$('.pixel').click(function(){
+    $(this).css('background-color' , color);
+});
+$('.box').click(function(changeColor){
+    $(this).css('background-color' , color);
+});
+$('.text').click(function(changeText){
+    $(this).css('color' , color);
+});
+</script>
+
+</div>
+
+<!-- <input id='showPalette'/> -->
+
+<!-- <div class='box' style=''></div> -->
+
+<!-- <input type='color' name='color' />
+<input type='color' name='color2' value='#3355cc' /> -->
+<!-- <br><br>
 <input id="colorpicker" style="display:none;" value="#000" />
 
 <script type="text/javascript">
@@ -19,9 +87,9 @@ $('.sp-container .sp-input').each(function() {
     this.defaultValue = this.value;
   });
 });
-</script>
+</script> -->
 
-<script>
+<!-- <script>
 $("#showPalette").spectrum({
     showPalette: true,
     palette: [
@@ -29,13 +97,13 @@ $("#showPalette").spectrum({
         ['rgb(255, 128, 0);', 'hsv 100 70 50', 'lightyellow']
     ]
 });
-</script>
+</script> -->
 
-<input id='textColor'>COLORS</input>
+<!-- <input id='textColor'>COLORS</input> -->
 
-<input id='textColor'/>
+<!-- <input id='textColor'/> -->
 
-<script>
+<!-- <script>
 $("#textColor").spectrum({
     showPalette: true,
     color: calEvent.textColor,
@@ -50,4 +118,4 @@ $("#textColor").spectrum({
        $("#eventPreview").css( "color", color.toHexString() );
     }
 });
-</script>
+</script> -->
