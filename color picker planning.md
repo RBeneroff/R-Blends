@@ -2,9 +2,12 @@
 
 Working on:
 - being able to delete from all_color_schemes when deleting from users color scheme
+- customization of color boxes
+- refresh color scheme form after submission
 
-Extras to add:
-- create a drop down menu for login/signup
+Bugs to fix:
+- when you log out and sign in under another user, if you don't refresh, the other user's color schemes show up until you click the button or add a new one
+- heroku not dynamically updating but local is?
 
 ## ERD:
   Schema:
@@ -58,11 +61,8 @@ How to use Spectrum:
 - color.toRgbString() work for me
 - in use: http://jsfiddle.net/bgrins/ctkY3/
 
-Bugs to fix:
-- when you log out and sign in under another user, if you don't refresh, the other user's color schemes show up until you click the button or add a new one
-
 COMPLETE: basic MVP done
 - authentication (log in, sign up, log out)
 - CRUD
 - at least 2 models
-- deployed 
+- deployed
