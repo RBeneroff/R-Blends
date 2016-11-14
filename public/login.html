@@ -16,12 +16,12 @@
     <form class="col s12" ng-submit="blend.login(user)">
       <div class="row">
         <div class="input-field col s12 m6">
-          <i id='icon' class="prefix small material-icons grey-text text-grey darken-4">perm_identity</i><input id='input' type="text" class="validate" ng-model="user.username">
+          <i id='icon' class="prefix small material-icons grey-text text-grey darken-4">perm_identity</i><input id='input' type="text" ng-model="user.username" name='username'>
           <label id='label' for="username">Username</label>
         </div>
         <div class="input-field col s12 m6">
           <i class="prefix small material-icons grey-text text-grey darken-4">lock_outline</i><input id='input1' type="password" class="validate" ng-model="user.password">
-          <label id='label1' for="password">Password</label>
+          <label id='label1' for="password" data-error="wrong">Password</label>
         </div>
       </div>
       <button class="btn waves-effect waves-light blue-grey lighten-4" type="submit" name="action">Log In</button>

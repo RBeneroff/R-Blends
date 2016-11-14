@@ -43,9 +43,10 @@
           data: {user : user}
         })
         .then(function(response) {
-          // if (response.data.status === 401) {
-          //   self.user.password = '';
-          // }
+          if (response.data.status === 401) {
+            $('#input, #input1').addClass('animated shake');
+            self.user.password = '';
+          }
           console.log(response, user, 'this is the current user');
           self.user = response.data.user;
           self.id = response.data.user.id;
@@ -94,6 +95,7 @@
         })
       }
       this.newInformation = {};
+
 
 // COLOR SCHEME FUNCTIONS
 
