@@ -1,10 +1,8 @@
 # R-Blends - current tasks/bugs/reaches
 
 Working on:
-- refresh color scheme form after submission
 
 Bugs to fix:
-- when you log out and sign in under another user, if you don't refresh, the other user's color schemes show up until you click the button or add a new one
 - heroku not dynamically updating but local is?
 
 Reaches/other feature to implement:

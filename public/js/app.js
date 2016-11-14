@@ -104,24 +104,6 @@
         self.allColorSchemes = response.data.allColorSchemes;
       })
 
-      // this.showColorSchemes = function(id) {
-      //   console.log('user id', self.id);
-      //   return $http({
-      //     url: `${rootUrl}/users/${id}/color_schemes`,
-      //     method: 'GET'
-      //   })
-      //   .then(function(response) {
-      //     console.log(response);
-      //     self.colorSchemes = response.data.colorSchemes;
-      //   })
-      // }
-
-      // $http.get(`${rootUrl}/all_color_schemes/${id}`)
-      // .then(function(response) {
-      //   console.log(response, 'ALL color schemes id');
-      //   self.all_color_schemes.id = response.data.id;
-      // })
-
       this.showAllColorSchemes = function(all_color_schemes) {
         console.log('allColorSchemes clicked');
         return $http({
@@ -152,6 +134,7 @@
           console.log(response);
           console.log('newColorScheme ---->', newColorScheme)
           self.colorSchemes.push(newColorScheme);
+          self.newColorScheme = '';
         })
         .catch(function(err) {
           console.log(err);
@@ -203,7 +186,20 @@
 })() //IIFE
 
 
-//unused code
+//UNUSED CODE
+
+// this.showColorSchemes = function(id) {
+//   console.log('user id', self.id);
+//   return $http({
+//     url: `${rootUrl}/users/${id}/color_schemes`,
+//     method: 'GET'
+//   })
+//   .then(function(response) {
+//     console.log(response);
+//     self.colorSchemes = response.data.colorSchemes;
+//   })
+// }
+
 // newColorScheme = {
 //   color_scheme_name: color_scheme_name,
 //   color_one: color_one,
