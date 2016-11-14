@@ -49,7 +49,7 @@
             <div class="nav-wrapper" class="blue-text text-darken-2">
               <a ui-sref='home' class="brand-logo left black-text"> <i class="tiny material-icons">invert_colors</i></a>
               <ul class="right">
-                <li><a class='nav-link' ui-sref='explore' ui-sref-active='active'>Explore</a></li>
+                <li><a class='nav-link' ui-sref='explore' ui-sref-active='active' ng-click="blend.showAllColorSchemes(all_color_schemes)">Explore</a></li>
                 <li ng-show='blend.user'><a class='nav-link' class="black-text" ui-sref='blend' ui-sref-active='active'>Blend</a></li>
                 <li ng-hide='blend.user'><a class="dropdown-button nav-link" href="#!" data-activates="dropdown1">Join<i class="material-icons right">arrow_drop_down</i></a></li>
                 <li ng-show='blend.user'><a class="dropdown-button nav-link" href="#!" data-activates="dropdown2">{{blend.user.username}}<i class="material-icons right">arrow_drop_down</i></a></li>

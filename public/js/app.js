@@ -98,11 +98,11 @@
 // COLOR SCHEME FUNCTIONS
 
 // Get All Color Schemes From All Users
-      // $http.get(`${rootUrl}/all_color_schemes`)
-      // .then(function(response) {
-      //   console.log(response, 'ALL COLOR SCHEMES');
-      //   self.allColorSchemes = response.data.allColorSchemes;
-      // })
+      $http.get(`${rootUrl}/all_color_schemes`)
+      .then(function(response) {
+        console.log(response, 'ALL COLOR SCHEMES');
+        self.allColorSchemes = response.data.allColorSchemes;
+      })
 
       // this.showColorSchemes = function(id) {
       //   console.log('user id', self.id);
@@ -116,8 +116,14 @@
       //   })
       // }
 
+      // $http.get(`${rootUrl}/all_color_schemes/${id}`)
+      // .then(function(response) {
+      //   console.log(response, 'ALL color schemes id');
+      //   self.all_color_schemes.id = response.data.id;
+      // })
+
       this.showAllColorSchemes = function(all_color_schemes) {
-        // console.log('allColorSchemes clicked');
+        console.log('allColorSchemes clicked');
         return $http({
           url: `${rootUrl}/all_color_schemes`,
           method: 'GET'
@@ -152,16 +158,23 @@
         })
       }
 
-      this.deleteColorScheme = function(user_id, color_scheme_id, index, all_color_scheme_id) {
-        console.log('user:', user_id, 'color_scheme_id:', color_scheme_id, 'index:', index, 'all_color_scheme_id', all_color_scheme_id);
+      this.deleteColorScheme = function(user_id, color_scheme_id, index) {
+        console.log('user:', user_id, 'color_scheme_id:', color_scheme_id, 'index:', index);
         self.colorSchemes.splice(index, 1);
+        // self.all_color_schemes.splice(index, 1);
         return $http({
           url: `${rootUrl}/users/${user_id}/color_schemes/${color_scheme_id}`,
           method: 'DELETE'
         })
         // .then(function(response) {
         //   return $http({
-        //     url: `${rootUrl}/all_color_schemes/${all_color_scheme_id}`,
+        //     url: `${rootUrl}/all_color_schemes/${id}`,
+        //     method: 'GET'
+        //   })
+        // })
+        // .then(function(response) {
+        //   return $http({
+        //     url: `${rootUrl}/all_color_schemes/${id}`,
         //     method: 'DELETE',
         //   })
         // })
@@ -181,6 +194,10 @@
       $scope.hoverOut = function(){
           this.showName = false;
       };
+
+      // $scope.random = function() {
+      //   return 0.5 - Math.random();
+      // }
 
     });
 })() //IIFE

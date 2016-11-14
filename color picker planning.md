@@ -1,9 +1,9 @@
 # Color Picker Planning & ERD - Ruby on Rails/AngularJS
 
 Working on:
-- being able to delete from all_color_schemes when deleting from users color scheme
 - show all color schemes on explore page
 - refresh color scheme form after submission
+- change ng-click button on explore to show on load
 
 Bugs to fix:
 - when you log out and sign in under another user, if you don't refresh, the other user's color schemes show up until you click the button or add a new one
@@ -46,13 +46,14 @@ Pages:
 - Settings - update password and email address
 
 Reaches:
-- have the explore page be the color schemes that other user's put together
+- - being able to delete from all_color_schemes when deleting from users color scheme
 - be able to change the colors of the website when choosing colors
 - in Settings:
   - be able to create your own customized color scheme for the website
   - upload your own photo
   - track your history
 - add an invite friends button to the user's dropdown menu
+- create a function to randomize the 10 color schemes that show on the explore page
 
 How to use Spectrum:
 - var value = $("#font_color").val();

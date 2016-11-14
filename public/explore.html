@@ -1,8 +1,9 @@
 <div class='explore'>
 <div class='triangle'></div>
 <div id='heading'>
+  <br>
 <h2 class='text'>Explore</h2>
-<h5 class='text'>See what other users are doing</h5>
+<h5 class='text'>recent color schemes</h5>
 
 <br><br><br><br>
 </div>
@@ -10,13 +11,10 @@
 </div>
 
 <div class='explore-container'>
-<!-- <div class='flex'>
-<div class='triangle3'></div></div> -->
-<h4>All Users</h4>
-
-<button type='submit' class="waves-effect waves-light blue blue lighten-4 btn btn" ng-click="blend.showAllColorSchemes(all_color_schemes)">Show Color Schemes</button>
-<br><br>
-<div class="showAllColorSchemes" ng-repeat='colors in blend.all_color_schemes' ng-mouseover='hoverIn()' ng-mouseleave='hoverOut()'>
+  <br>
+<h5>See what other members are doing</h5>
+<br>
+<div class="showAllColorSchemes" ng-repeat='colors in blend.all_color_schemes | limitTo: 10' ng-mouseover='hoverIn()' ng-mouseleave='hoverOut()'>
   <div class='box-container'>
     <div class="pixel" style="background-color:{{colors.color_one}}"></div>
     <div class="pixel" style="background-color:{{colors.color_two}}"></div>
@@ -31,9 +29,13 @@
 </div>
 
 <div class='e-buttons'>
-<br>
+<br><br>
 <h4 class='text'>Begin Blending:</h4>
 <button class="btn waves-effect waves-light blue blue lighten-4" ui-sref='login'>Log In</button>
 <button class="btn waves-effect waves-light blue blue lighten-4" ui-sref='signup'>Sign Up</button>
-<br><br><br>
+<br><br><br><br>
 </div>
+
+<!-- UNUSED CODE -->
+
+<!-- <button type='submit' class="waves-effect waves-light blue blue lighten-4 btn btn" ng-click="blend.showAllColorSchemes(all_color_schemes)">Show Color Schemes</button> -->
