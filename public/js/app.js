@@ -173,6 +173,22 @@
         })
       }
 
+// need to create a new route to do this
+      // this.clearHistory = function(user_id) {
+      //   console.log('user:', user_id);
+      //   return $http({
+      //     url: `${rootUrl}/users/${user_id}/color_schemes`,
+      //     method: 'DELETE'
+      //   })
+      //   .then(function(response) {
+      //     console.log(response);
+      //     return response;
+      //   })
+      //   .catch(function(err) {
+      //     console.log(err);
+      //   })
+      // }
+
       $scope.hoverIn = function(){
           this.showName = true;
       };

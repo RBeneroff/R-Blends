@@ -21,7 +21,7 @@ Reaches/other feature to implement:
 https://www.sitepoint.com/easy-form-validation-angularjs-ngmessages/
 - R-Blends logo
 - customize Spectrum's color picker
-- if password or username wrong, shake or turn line red
+- doesn't log you out when you refresh the page
 
 COMPLETE: MVP done
 - authentication (log in, sign up, log out)
