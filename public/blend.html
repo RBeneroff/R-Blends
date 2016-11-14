@@ -31,13 +31,15 @@
 <button class="waves-effect waves-light light-blue lighten-4 btn btn" type='submit' ng-click="blend.showColorSchemes(blend.user.id)">Show Color Schemes</button>
 {{blend.user.colorSchemes}}
 <div class="showColorSchemes" ng-repeat='color in blend.colorSchemes track by $index'>
-  <div>{{color.color_scheme_name}}</div>
-  <div>{{color.color_one}}</div>
-  <div>{{color.color_two}}</div>
-  <div>{{color.color_three}}</div>
-  <div>{{color.color_four}}</div>
-  <div>{{color.color_five}}</div>
-  <button class="btn-floating btn-small waves-effect waves-light blue-grey lighten-3" ng-click='blend.deleteColorScheme(blend.user.id, blend.colorSchemes[$index].id, $index)'>DELETE</button>
+  <h5>{{color.color_scheme_name}}</h5>
+    <button class="btn-floating btn-small waves-effect waves-light blue-grey lighten-3" ng-click='blend.deleteColorScheme(blend.user.id, blend.colorSchemes[$index].id, $index)'>X</button>
+  <div class='box-container'>
+    <div class="pixel" style="background-color:{{color.color_one}}"></div>
+    <div class="pixel" style="background-color:{{color.color_two}}"></div>
+    <div class="pixel" style="background-color:{{color.color_three}}"></div>
+    <div class="pixel" style="background-color:{{color.color_four}}"></div>
+    <div class="pixel" style="background-color:{{color.color_five}}"></div>
+  </div>
 </div>
 
 <!-- SPECTRUM FUNCTIONS -->
