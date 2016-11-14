@@ -188,9 +188,33 @@ nav {
 }
 
 #scheme-name {
-
   /*text-align: center;*/
 }
+
+#show-details {
+  display: flex;
+  align-items: center;
+}
+
+#name-spacing {
+  padding: 0 2vh 0 0;
+}
+
+.animate-show {
+  margin-top: -8vh;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  opacity: 1;
+}
+
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove {
+  display: inline-block;
+}
+.animate-show.ng-hide {
+  opacity: 0;
+}
+/*FROM http://plnkr.co/edit/eGohFqiGKmkonmLwT3g1?p=preview*/
 
 /*FORM SPECIFIC CSS*/
 

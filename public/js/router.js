@@ -1,6 +1,6 @@
 (function() {
   angular
-    .module('BlenderApp', ['ui.router'])
+    .module('BlenderApp', ['ui.router', 'ngAnimate'])
     .config(MainRouter);
 
   MainRouter.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];

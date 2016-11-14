@@ -1,7 +1,7 @@
 (function() {
   angular
     .module('BlenderApp')
-    .controller('BlenderController', function($http, $state) {
+    .controller('BlenderController', function($http, $state, $scope) {
       var self = this;
       var rootUrl = 'http://localhost:3000'
       // var rootUrl = 'https://r-blends-backend.herokuapp.com'
@@ -162,9 +162,13 @@
         })
       }
 
+      $scope.hoverIn = function(){
+          this.showName = true;
+      };
 
-
-
+      $scope.hoverOut = function(){
+          this.showName = false;
+      };
 
     });
 })() //IIFE
