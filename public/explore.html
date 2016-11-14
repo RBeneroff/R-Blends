@@ -14,14 +14,15 @@
 <div class='triangle3'></div></div> -->
 <h4>All Users</h4>
 
-<button type='submit' class="waves-effect waves-light blue blue lighten-4 btn btn" ng-click="blend.showAllColorSchemes(blend.id)">Show Color Schemes</div>
-<div ng-repeat='colors in blend.allColorSchemes track by $index'>
-  <div>{{colors.color_scheme_name}}</button>
-  <div>{{colors.color_one}}</div>
-  <div>{{colors.color_two}}</div>
-  <div>{{colors.color_three}}</div>
-  <div>{{colors.color_four}}</div>
-  <div>{{colors.color_five}}</div>
+<button type='submit' class="waves-effect waves-light blue blue lighten-4 btn btn" ng-click="blend.showAllColorSchemes(all_color_schemes)">Show Color Schemes</button>
+<div class="showAllColorSchemes" ng-repeat='colors in blend.all_color_schemes'>
+  <div class='box-container'>
+    <div class="pixel" style="background-color:{{colors.color_one}}"></div>
+    <div class="pixel" style="background-color:{{colors.color_two}}"></div>
+    <div class="pixel" style="background-color:{{colors.color_three}}"></div>
+    <div class="pixel" style="background-color:{{colors.color_four}}"></div>
+    <div class="pixel" style="background-color:{{colors.color_five}}"></div>
+  </div>
 </div>
 </div>
 

@@ -98,11 +98,11 @@
 // COLOR SCHEME FUNCTIONS
 
 // Get All Color Schemes From All Users
-      $http.get(`${rootUrl}/all_color_schemes`)
-      .then(function(response) {
-        console.log(response, 'ALL COLOR SCHEMES');
-        self.allColorSchemes = response.data.allColorSchemes;
-      })
+      // $http.get(`${rootUrl}/all_color_schemes`)
+      // .then(function(response) {
+      //   console.log(response, 'ALL COLOR SCHEMES');
+      //   self.allColorSchemes = response.data.allColorSchemes;
+      // })
 
       // this.showColorSchemes = function(id) {
       //   console.log('user id', self.id);
@@ -116,28 +116,15 @@
       //   })
       // }
 
-      // var showColorSchemes = function(id) {
-      //   console.log('user id', id);
-      //   return $http({
-      //     url: `${rootUrl}/users/${id}/color_schemes`,
-      //     method: 'GET'
-      //   })
-      //   .then(function(response) {
-      //     console.log(response);
-      //     self.colorSchemes = response.data.colorSchemes;
-      //   })
-      // }
-      // showColorSchemes();
-
-      this.showAllColorSchemes = function(id) {
-        console.log('allColorSchemes', id);
+      this.showAllColorSchemes = function(all_color_schemes) {
+        // console.log('allColorSchemes clicked');
         return $http({
           url: `${rootUrl}/all_color_schemes`,
           method: 'GET'
         })
         .then(function(response) {
           console.log(response, 'all schemes');
-          self.allColorSchemes = response.data.allColorSchemes;
+          self.all_color_schemes = response.data.all_color_schemes;
         })
       }
 
