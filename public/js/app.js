@@ -30,6 +30,12 @@
         })
       }
 
+      $http.get(`${rootUrl}/users`)
+      .then(function(response) {
+        console.log(response, 'ALL USERS');
+        self.users = response.data.users;
+      })
+
       this.login = function(user) {
         return $http({
           url: `${rootUrl}/users/login`,
@@ -43,20 +49,26 @@
           console.log(response, user, 'this is the current user');
           self.user = response.data.user;
           self.id = response.data.user.id;
+          console.log(self.id, 'id of current user');
           console.log('token ---->', response.data.token);
           localStorage.setItem('token', JSON.stringify(response.data.token))
             $state.go('blend', {url: '/blend', user: response.data.user})
+        })
+        .then(function(response) {
+          console.log('hitting this part of promise');
+          return $http({
+            url: `${rootUrl}/users/${self.id}/color_schemes`,
+            method: 'GET'
+          })
+        })
+        .then(function(response) {
+          console.log(response);
+          self.colorSchemes = response.data.colorSchemes;
         })
         .catch(function(err) {
           console.log(err);
         })
       }
-
-      $http.get(`${rootUrl}/users`)
-      .then(function(response) {
-        console.log(response, 'ALL USERS');
-        self.users = response.data.users;
-      })
 
       this.logout = function(user) {
         console.log('logging out ---->', user);
@@ -92,17 +104,30 @@
         self.allColorSchemes = response.data.allColorSchemes;
       })
 
-      this.showColorSchemes = function(id) {
-        console.log('user id', id);
-        return $http({
-          url: `${rootUrl}/users/${id}/color_schemes`,
-          method: 'GET'
-        })
-        .then(function(response) {
-          console.log(response);
-          self.colorSchemes = response.data.colorSchemes;
-        })
-      }
+      // this.showColorSchemes = function(id) {
+      //   console.log('user id', self.id);
+      //   return $http({
+      //     url: `${rootUrl}/users/${id}/color_schemes`,
+      //     method: 'GET'
+      //   })
+      //   .then(function(response) {
+      //     console.log(response);
+      //     self.colorSchemes = response.data.colorSchemes;
+      //   })
+      // }
+
+      // var showColorSchemes = function(id) {
+      //   console.log('user id', id);
+      //   return $http({
+      //     url: `${rootUrl}/users/${id}/color_schemes`,
+      //     method: 'GET'
+      //   })
+      //   .then(function(response) {
+      //     console.log(response);
+      //     self.colorSchemes = response.data.colorSchemes;
+      //   })
+      // }
+      // showColorSchemes();
 
       this.showAllColorSchemes = function(id) {
         console.log('allColorSchemes', id);

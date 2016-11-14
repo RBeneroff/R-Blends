@@ -1,4 +1,4 @@
-<h2 class='blend'>{{blend.user.username}}'s Blends</h2>
+<h3 class='blend'>Blend</h3>
 <br><br>
 <form class="color_scheme_form" ng-submit="blend.addColorScheme(blend.newColorScheme, blend.user.id)">
   <div class='box-container'>
@@ -27,12 +27,9 @@
   </div>
 </form>
 
-<br><br><br>
-<button class="waves-effect waves-light light-blue lighten-4 btn btn" type='submit' ng-click="blend.showColorSchemes(blend.user.id)">Show Color Schemes</button>
 <br><br>
+<h5 class='blend'>{{blend.user.username}}'s Color Schemes</h5>
 <div class="showColorSchemes" ng-repeat='color in blend.colorSchemes track by $index' ng-mouseover='hoverIn()' ng-mouseleave='hoverOut()'>
-  <!-- <h5>{{color.color_scheme_name}}</h5> -->
-    <!-- <button class="btn-floating btn-small waves-effect waves-light blue-grey lighten-3" ng-click='blend.deleteColorScheme(blend.user.id, blend.colorSchemes[$index].id, $index)'>X</button> -->
   <div class='box-container'>
     <div class="pixel" class='saved-schemes' style="background-color:{{color.color_one}}"></div>
     <div class="pixel" style="background-color:{{color.color_two}}"></div>
@@ -40,7 +37,7 @@
     <div class="pixel" style="background-color:{{color.color_four}}"></div>
     <div class="pixel" style="background-color:{{color.color_five}}"></div>
     <span ng-show='showName' class='animate-show' id='show-details'>
-      <h5 id='name-spacing'>{{color.color_scheme_name}}</h5>
+      <h6 id='name-spacing'>{{color.color_scheme_name}}</h6>
       <button class="btn-floating btn-small waves-effect waves-light blue-grey lighten-3" ng-click='blend.deleteColorScheme(blend.user.id, blend.colorSchemes[$index].id, $index)'>X</button>
     </span>
   </div>
@@ -64,6 +61,12 @@ $('#one, #two, #three, #four, #five').click(function(){
     $(this).css('background-color' , color);
 });
 </script>
+
+
+<!-- UNUSED CODE -->
+
+<!-- <button class="waves-effect waves-light light-blue lighten-4 btn btn" type='submit' ng-click="blend.showColorSchemes(blend.user.id)">Show Color Schemes</button> -->
+
 <!-- <script>
 $("#color_two").spectrum({
     color: "#f00"

@@ -2,7 +2,7 @@
 
 Working on:
 - being able to delete from all_color_schemes when deleting from users color scheme
-- home screen can completely change colors
+- show all color schemes on explore page
 - refresh color scheme form after submission
 
 Bugs to fix:
