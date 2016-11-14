@@ -6,9 +6,17 @@
   <input id='color_three' ng-model='blend.newColorScheme.color_three'/>
   <input id='color_four' ng-model='blend.newColorScheme.color_four'/>
   <input id='color_five' ng-model='blend.newColorScheme.color_five'/>
+  <div class='box-container'>
+  <div class="pixel" id='one' style="background-color:#EAFEFF"></div>
+  <div class="pixel" id='two' style="background-color:#AFBEBF"></div>
+  <div class="pixel" id='three' style="background-color:#757F7F"></div>
+  <div class="pixel" id='four' style="background-color:#3A3F40"></div>
+  <div class="pixel" id='five' style="background-color:#D3E5E5"></div>
+  </div>
   <input id='color_scheme_name' ng-model='blend.newColorScheme.color_scheme_name'/>
   <button id='save-scheme' class="waves-effect waves-light light-blue lighten-3 btn btn" type='submit'>Save Color Scheme</button>
 </form>
+
 <!-- ng-click='blend.addColorScheme(colorScheme, blend.user.id)' -->
 <br><br><br>
 <button class="waves-effect waves-light light-blue lighten-3 btn btn" type='submit' ng-click="blend.showColorSchemes(blend.user.id)">Show Color Schemes</button>
@@ -26,16 +34,22 @@
 <!-- SPECTRUM FUNCTIONS -->
 
 <script>
-$("#color_one").spectrum({
-    color: "#f00"
+$("#color_one, #color_two, #color_three, #color_four, #color_five").spectrum({
+    color: "#f00",
+    change: function(colorSelected) {
+        color = colorSelected.toHexString();
+    }
+});
+$('#one, #two').click(function(){
+    $(this).css('background-color' , color);
 });
 </script>
-<script>
+<!-- <script>
 $("#color_two").spectrum({
     color: "#f00"
 });
-</script>
-<script>
+</script> -->
+<!-- <script>
 $("#color_three").spectrum({
     color: "#f00"
 });
@@ -49,4 +63,4 @@ $("#color_four").spectrum({
 $("#color_five").spectrum({
     color: "#f00"
 });
-</script>
+</script> -->
