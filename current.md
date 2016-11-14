@@ -17,7 +17,7 @@ Reaches/other feature to implement:
   - button to remove all the user's color schemes at once
 - add an invite friends button to the user's dropdown menu
 - create a function to randomize the 10 color schemes that show on the explore page
-- add validations to forms: http://demo.geekslabs.com/materialize/v3.1/form-validation.html?action=
+- add validations to forms: (have shaking, but tell why it failed) http://demo.geekslabs.com/materialize/v3.1/form-validation.html?action=
 https://www.sitepoint.com/easy-form-validation-angularjs-ngmessages/
 - R-Blends logo
 - customize Spectrum's color picker

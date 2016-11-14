@@ -23,6 +23,7 @@
             self.login(self.signed);
           } else {
             console.log(response);
+            $('#input2, #input3, #input4').addClass('animated shake');
           }
         })
         .catch(function(err) {
