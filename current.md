@@ -1,9 +1,10 @@
 # R-Blends - current tasks/bugs/reaches
 
 Working on:
+-
 
 Bugs to fix:
-- heroku not dynamically updating but local is?
+-
 
 Reaches/other feature to implement:
 - on Blend page - when click 'choose' the color updates in the pixel rectangle immediately
@@ -18,6 +19,7 @@ Reaches/other feature to implement:
 - create a function to randomize the 10 color schemes that show on the explore page
 - R-Blends logo
 - customize Spectrum's color picker
+- if password or username wrong, shake or turn line red
 
 COMPLETE: MVP done
 - authentication (log in, sign up, log out)

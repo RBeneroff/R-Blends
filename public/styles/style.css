@@ -187,10 +187,6 @@ nav {
   text-align: center;
 }
 
-#scheme-name {
-  /*text-align: center;*/
-}
-
 #show-details {
   display: flex;
   align-items: center;
