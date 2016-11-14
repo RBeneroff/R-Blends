@@ -181,6 +181,17 @@ nav {
   text-align: center;
 }
 
+/*BLEND PAGE*/
+
+.blend {
+  text-align: center;
+}
+
+#scheme-name {
+
+  /*text-align: center;*/
+}
+
 /*FORM SPECIFIC CSS*/
 
 /*.input-field:focus,*/
@@ -190,7 +201,8 @@ nav {
 #input3:focus,
 #input4:focus,
 #input5:focus,
-#input6:focus {
+#input6:focus,
+#input7:focus {
   border-bottom: 1px solid #353B40;
   box-shadow: 0 1px 0 0 #353B40;
   color: #353B40;
@@ -202,7 +214,8 @@ nav {
 #input3,
 #input4,
 #input5,
-#input6 {
+#input6,
+#input7 {
   border-bottom: 1px solid gray;
   box-shadow: 0 1px 0 0 gray;
   color: gray;
@@ -214,7 +227,8 @@ nav {
 #label1,
 #label4,
 #label5,
-#label6 {
+#label6,
+#label7 {
   color: gray;
 }
 

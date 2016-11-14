@@ -1,25 +1,34 @@
-<h1>BLEND</h1>
-
+<h2 class='blend'>{{blend.user.username}}'s Blends</h2>
+<br><br>
 <form class="color_scheme_form" ng-submit="blend.addColorScheme(blend.newColorScheme, blend.user.id)">
-  <input id='color_one' ng-model='blend.newColorScheme.color_one'/>
-  <input id='color_two' ng-model='blend.newColorScheme.color_two'/>
-  <input id='color_three' ng-model='blend.newColorScheme.color_three'/>
-  <input id='color_four' ng-model='blend.newColorScheme.color_four'/>
-  <input id='color_five' ng-model='blend.newColorScheme.color_five'/>
   <div class='box-container'>
-  <div class="pixel" id='one' style="background-color:#EAFEFF"></div>
-  <div class="pixel" id='two' style="background-color:#AFBEBF"></div>
-  <div class="pixel" id='three' style="background-color:#757F7F"></div>
-  <div class="pixel" id='four' style="background-color:#3A3F40"></div>
-  <div class="pixel" id='five' style="background-color:#D3E5E5"></div>
+    <input id='color_one' ng-model='blend.newColorScheme.color_one'/>
+    <input id='color_two' ng-model='blend.newColorScheme.color_two'/>
+    <input id='color_three' ng-model='blend.newColorScheme.color_three'/>
+    <input id='color_four' ng-model='blend.newColorScheme.color_four'/>
+    <input id='color_five' ng-model='blend.newColorScheme.color_five'/>
   </div>
-  <input id='color_scheme_name' ng-model='blend.newColorScheme.color_scheme_name'/>
-  <button id='save-scheme' class="waves-effect waves-light light-blue lighten-3 btn btn" type='submit'>Save Color Scheme</button>
+  <br>
+  <div class='box-container'>
+    <div class="pixel" id='one' style="background-color:#EAFEFF"></div>
+    <div class="pixel" id='two' style="background-color:#AFBEBF"></div>
+    <div class="pixel" id='three' style="background-color:#757F7F"></div>
+    <div class="pixel" id='four' style="background-color:#3A3F40"></div>
+    <div class="pixel" id='five' style="background-color:#D3E5E5"></div>
+  </div>
+  <br>
+  <div class="row" id='scheme-name'>
+    <div class="input-field col s4">
+      <input id='input7' ng-model='blend.newColorScheme.color_scheme_name' type='text' class='validate'/>
+      <label id='label7' for="color_scheme_name">Color Scheme Name</label>
+    </div>
+    <br>
+    <button id='save-scheme' class="waves-effect waves-light light-blue lighten-4 btn btn" type='submit'>Save Color Scheme</button>
+  </div>
 </form>
 
-<!-- ng-click='blend.addColorScheme(colorScheme, blend.user.id)' -->
 <br><br><br>
-<button class="waves-effect waves-light light-blue lighten-3 btn btn" type='submit' ng-click="blend.showColorSchemes(blend.user.id)">Show Color Schemes</button>
+<button class="waves-effect waves-light light-blue lighten-4 btn btn" type='submit' ng-click="blend.showColorSchemes(blend.user.id)">Show Color Schemes</button>
 {{blend.user.colorSchemes}}
 <div class="showColorSchemes" ng-repeat='color in blend.colorSchemes track by $index'>
   <div>{{color.color_scheme_name}}</div>
@@ -35,12 +44,17 @@
 
 <script>
 $("#color_one, #color_two, #color_three, #color_four, #color_five").spectrum({
-    color: "#f00",
+    color: "tinycolor",
+    clickoutFiresChange: true,
+    preferredFormat: "hex",
+    showPalette: true,
+    showAlpha: true,
+    showInput: true,
     change: function(colorSelected) {
         color = colorSelected.toHexString();
     }
 });
-$('#one, #two').click(function(){
+$('#one, #two, #three, #four, #five').click(function(){
     $(this).css('background-color' , color);
 });
 </script>
