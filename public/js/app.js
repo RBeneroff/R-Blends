@@ -128,13 +128,6 @@
           method: 'POST',
           data: {color_scheme: newColorScheme}
         })
-        // .then(function(response) {
-        //   return $http({
-        //     url: `${rootUrl}/all_color_schemes`,
-        //     method: 'POST',
-        //     data: {all_color_scheme: newColorScheme}
-        //   })
-        // })
         .then(function(response) {
           console.log(response);
           console.log('newColorScheme ---->', newColorScheme)
@@ -146,34 +139,20 @@
         })
       }
 
-      this.deleteColorScheme = function(user_id, color_scheme_id, index, all_color_scheme_id) {
-        console.log('grab all color scheme id --->', all_color_scheme_id)
+      this.deleteColorScheme = function(user_id, color_scheme_id, index) {
         console.log('user:', user_id, 'color_scheme_id:', color_scheme_id, 'index:', index);
-        // self.colorSchemes.splice(index, 1);
-        // self.all_color_schemes.splice(index, 1);
-        // return $http({
-        //   url: `${rootUrl}/users/${user_id}/color_schemes/${color_scheme_id}`,
-        //   method: 'DELETE'
-        // })
-        // .then(function(response) {
-          return $http({
-            url: `${rootUrl}/all_color_schemes/${all_color_scheme_id}`,
-            method: 'GET'
-          })
-        // })
-        // .then(function(response) {
-        //   return $http({
-        //     url: `${rootUrl}/all_color_schemes/${id}`,
-        //     method: 'DELETE',
-        //   })
-        // })
-        // .then(function(response) {
-        //   console.log(response);
-        //   return response;
-        // })
-        // .catch(function(err) {
-        //   console.log(err);
-        // })
+        self.colorSchemes.splice(index, 1);
+        return $http({
+          url: `${rootUrl}/users/${user_id}/color_schemes/${color_scheme_id}`,
+          method: 'DELETE'
+        })
+        .then(function(response) {
+          console.log(response);
+          return response;
+        })
+        .catch(function(err) {
+          console.log(err);
+        })
       }
 
       this.clearHistory = function(user_id) {
@@ -183,7 +162,7 @@
           method: 'DELETE'
         })
         .then(function(response) {
-          console.log(response);
+          // console.log(response);
           return response;
         })
         .then(function(response) {
@@ -240,3 +219,11 @@
 //   color_four: color_four,
 //   color_five: color_five,
 // }
+
+// .then(function(response) {
+//   return $http({
+//     url: `${rootUrl}/all_color_schemes`,
+//     method: 'POST',
+//     data: {all_color_scheme: newColorScheme}
+//   })
+// })

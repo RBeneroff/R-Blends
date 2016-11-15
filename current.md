@@ -3,6 +3,7 @@
 Working on:
 - add validation to cover scheme name (cant submit without name and at least one colors)
 - being able to delete from all_color_schemes when deleting from users color scheme
+- need to remove all unecessary stuff from all_color_schemes
 
 Bugs to fix:
 - make sure everything is mobile friendly (is there a show-on-small-only?)
