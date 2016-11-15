@@ -14,7 +14,7 @@
   <br>
 <h5>See what other members are doing</h5>
 <br>
-<div class="showAllColorSchemes" ng-repeat='colors in blend.all_color_schemes | limitTo: 10' ng-mouseover='hoverIn()' ng-mouseleave='hoverOut()'>
+<div class="showAllColorSchemes" ng-repeat='colors in blend.colorSchemes.all | limitTo: 10' ng-mouseover='hoverIn()' ng-mouseleave='hoverOut()'>
   <div class='box-container'>
     <div class="pixel" style="background-color:{{colors.color_one}}"></div>
     <div class="pixel" style="background-color:{{colors.color_two}}"></div>

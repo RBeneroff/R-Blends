@@ -1,21 +1,19 @@
 # R-Blends - current tasks/bugs/reaches
 
 Working on:
-- clearing all of a user's history
 - add validation to cover scheme name (cant submit without name and at least one colors)
+- being able to delete from all_color_schemes when deleting from users color scheme
 
 Bugs to fix:
 - make sure everything is mobile friendly (is there a show-on-small-only?)
 
 Reaches/other feature to implement:
 - on Blend page - when click 'choose' the color updates in the pixel rectangle immediately
-- being able to delete from all_color_schemes when deleting from users color scheme
 - be able to change the colors of the website when choosing colors
 - in Settings:
   - be able to create your own customized color scheme for the website
   - upload your own photo
   - track your history
-  - button to remove all the user's color schemes at once
 - add an invite friends button to the user's dropdown menu
 - create a function to randomize the 10 color schemes that show on the explore page
 - add validations to forms: (have it shaking - but tell why it failed) http://demo.geekslabs.com/materialize/v3.1/form-validation.html?action=
