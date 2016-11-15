@@ -3,8 +3,8 @@
     .module('BlenderApp')
     .controller('BlenderController', function($http, $state, $scope) {
       var self = this;
-      // var rootUrl = 'http://localhost:3000'
-      var rootUrl = 'https://r-blends-backend.herokuapp.com'
+      var rootUrl = 'http://localhost:3000'
+      // var rootUrl = 'https://r-blends-backend.herokuapp.com'
 
 // USER FUNCTIONS
 
@@ -173,21 +173,31 @@
         })
       }
 
-// need to create a new route to do this
-      // this.clearHistory = function(user_id) {
-      //   console.log('user:', user_id);
-      //   return $http({
-      //     url: `${rootUrl}/users/${user_id}/color_schemes`,
-      //     method: 'DELETE'
-      //   })
-      //   .then(function(response) {
-      //     console.log(response);
-      //     return response;
-      //   })
-      //   .catch(function(err) {
-      //     console.log(err);
-      //   })
-      // }
+      this.clearHistory = function(user_id) {
+        console.log('user:', user_id);
+        return $http({
+          url: `${rootUrl}/users/${user_id}/color_schemes`,
+          method: 'DELETE'
+        })
+        .then(function(response) {
+          console.log(response);
+          return response;
+        })
+        .then(function(response) {
+          console.log('hitting this part of promise');
+          return $http({
+            url: `${rootUrl}/users/${self.id}/color_schemes`,
+            method: 'GET'
+          })
+        })
+        .then(function(response) {
+          console.log(response);
+          self.colorSchemes = response.data.colorSchemes;
+        })
+        .catch(function(err) {
+          console.log(err);
+        })
+      }
 
       $scope.hoverIn = function(){
           this.showName = true;

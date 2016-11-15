@@ -1,7 +1,8 @@
 # R-Blends - current tasks/bugs/reaches
 
 Working on:
--
+- clearing all of a user's history
+- add validation to cover scheme name (cant submit without name and at least one colors)
 
 Bugs to fix:
 - make sure everything is mobile friendly (is there a show-on-small-only?)
@@ -17,9 +18,8 @@ Reaches/other feature to implement:
   - button to remove all the user's color schemes at once
 - add an invite friends button to the user's dropdown menu
 - create a function to randomize the 10 color schemes that show on the explore page
-- add validations to forms: (have shaking, but tell why it failed) http://demo.geekslabs.com/materialize/v3.1/form-validation.html?action=
+- add validations to forms: (have it shaking - but tell why it failed) http://demo.geekslabs.com/materialize/v3.1/form-validation.html?action=
 https://www.sitepoint.com/easy-form-validation-angularjs-ngmessages/
-- R-Blends logo
 - customize Spectrum's color picker
 - doesn't log you out when you refresh the page
 
