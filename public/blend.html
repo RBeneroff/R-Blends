@@ -31,7 +31,7 @@
 
 <br><br>
 <h5 class='blend'>{{blend.user.username}}'s Color Schemes</h5>
-<div class="showColorSchemes" ng-repeat='color in blend.colorSchemes track by $index' ng-mouseover='hoverIn()' ng-mouseleave='hoverOut()'>
+<div class="showColorSchemes" ng-repeat='color in blend.colorSchemes track by $index' ng-mouseover='hoverIn()' ng-mouseleave='hoverOut()' ng-if='blend.colorSchemes.length >= 1'>
   <div class='box-container'>
     <div class="pixel" class='saved-schemes' style="background-color:{{color.color_one}}"></div>
     <div class="pixel" style="background-color:{{color.color_two}}"></div>
@@ -43,6 +43,10 @@
       <button class="btn-floating btn-small waves-effect waves-light blue-text white" ng-click='blend.deleteColorScheme(blend.user.id, blend.colorSchemes[$index].id, $index)'>X</button>
     </span>
   </div>
+</div>
+<div class="showColorSchemes" ng-if='blend.colorSchemes.length < 1'>
+  <br>
+  <p class='no-schemes'>You don't have any saved color schemes. Start blending above!</p>
 </div>
 
 <!-- SPECTRUM FUNCTIONS -->

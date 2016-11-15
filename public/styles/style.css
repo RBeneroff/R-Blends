@@ -232,6 +232,10 @@ nav {
 }
 /*FROM http://plnkr.co/edit/eGohFqiGKmkonmLwT3g1?p=preview*/
 
+.no-schemes {
+  text-align: center;
+}
+
 /*FORM SPECIFIC CSS*/
 
 /*.input-field:focus,*/
