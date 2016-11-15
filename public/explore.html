@@ -28,11 +28,18 @@
 </div>
 </div>
 
-<div class='e-buttons'>
+<div class='e-buttons' ng-hide='blend.user'>
 <br><br>
 <h4 class='text'>Begin Blending:</h4>
 <button class="btn waves-effect waves-light blue blue lighten-4" ui-sref='login'>Log In</button>
 <button class="btn waves-effect waves-light blue blue lighten-4" ui-sref='signup'>Sign Up</button>
+<br><br><br><br>
+</div>
+
+<div class='e-buttons' ng-show='blend.user'>
+<br><br>
+<h4 class='text'>Begin Blending:</h4>
+<button class="btn waves-effect waves-light blue blue lighten-4" ui-sref='blend'>Your Page</button>
 <br><br><br><br>
 </div>
 
