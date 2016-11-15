@@ -22,6 +22,11 @@ nav {
   color: black;
 }
 
+.brand-logo {
+  margin-top: 8vh;
+  zoom: .2;
+}
+
 #color,
 #color2,
 #color3,
@@ -43,6 +48,12 @@ nav {
 }
 
 /*HOME PAGE*/
+
+#logo {
+  margin-top: -15vh;
+  margin-bottom: -3vh;
+  zoom: .7;
+}
 
 .triangle,
 .triangle2,
@@ -70,7 +81,7 @@ nav {
   /*background: black;*/
   /*padding: 5vh;*/
   /*color: white;*/
-  margin-top: -30vh;
+  margin-top: -35vh;
   margin-bottom: -20vh;
   /*background-color: ivory;*/
 }
