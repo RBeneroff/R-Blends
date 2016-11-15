@@ -14,15 +14,15 @@
   <br>
 <h5>See what other members are doing</h5>
 <br>
-<div class="showAllColorSchemes" ng-repeat='colors in blend.colorSchemes.all | limitTo: 10' ng-mouseover='hoverIn()' ng-mouseleave='hoverOut()'>
+<div class="showAllColorSchemes" ng-repeat='color in blend.allColorSchemes | limitTo: 10' ng-mouseover='hoverIn()' ng-mouseleave='hoverOut()'>
   <div class='box-container'>
-    <div class="pixel" style="background-color:{{colors.color_one}}"></div>
-    <div class="pixel" style="background-color:{{colors.color_two}}"></div>
-    <div class="pixel" style="background-color:{{colors.color_three}}"></div>
-    <div class="pixel" style="background-color:{{colors.color_four}}"></div>
-    <div class="pixel" style="background-color:{{colors.color_five}}"></div>
+    <div class="pixel" style="background-color:{{color.color_one}}"></div>
+    <div class="pixel" style="background-color:{{color.color_two}}"></div>
+    <div class="pixel" style="background-color:{{color.color_three}}"></div>
+    <div class="pixel" style="background-color:{{color.color_four}}"></div>
+    <div class="pixel" style="background-color:{{color.color_five}}"></div>
     <span ng-show='showName' class='animate-show hide-on-small-only' id='show-details'>
-      <h5 id='name-spacing'>{{colors.color_scheme_name}}</h5>
+      <h5 id='name-spacing'>{{color.color_scheme_name}}</h5>
     </span>
   </div>
 </div>
@@ -44,5 +44,7 @@
 </div>
 
 <!-- UNUSED CODE -->
+
+<!-- <button type='submit' class="waves-effect waves-light blue blue lighten-4 btn btn" ng-click="blend.showAllColorSchemes(allColorSchemes)">Show Color Schemes</button> -->
 
 <!-- <button type='submit' class="waves-effect waves-light blue blue lighten-4 btn btn" ng-click="blend.showAllColorSchemes(all_color_schemes)">Show Color Schemes</button> -->

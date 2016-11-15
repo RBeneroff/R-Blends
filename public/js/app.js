@@ -104,11 +104,11 @@
       $http.get(`${rootUrl}/color_schemes/all_color_schemes`)
       .then(function(response) {
         console.log(response, 'ALL COLOR SCHEMES');
-        self.all_color_schemes = response.data.all_color_schemes;
+        self.allColorSchemes = response.data.allColorSchemes;
         // self.color_id = response.data.all_color_schemes.color_id;
       })
 
-      this.showAllColorSchemes = function(color_schemes) {
+      this.showAllColorSchemes = function(allColorSchemes) {
         console.log('allColorSchemes clicked');
         return $http({
           url: `${rootUrl}/color_schemes/all_color_schemes`,
@@ -116,7 +116,7 @@
         })
         .then(function(response) {
           console.log(response, 'all schemes');
-          self.all_color_schemes = response.data.all_color_schemes;
+          self.allColorSchemes = response.data.allColorSchemes;
           // self.color_id = response.data.all_color_schemes.color_id;
         })
       }
