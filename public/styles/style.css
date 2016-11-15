@@ -52,7 +52,7 @@ nav {
 #logo {
   margin-top: -15vh;
   margin-bottom: -3vh;
-  zoom: .7;
+  zoom: .6;
 }
 
 .triangle,
@@ -82,6 +82,15 @@ nav {
   /*padding: 5vh;*/
   /*color: white;*/
   margin-top: -35vh;
+  margin-bottom: -20vh;
+  /*background-color: ivory;*/
+}
+
+#heading2 {
+  /*background: black;*/
+  /*padding: 5vh;*/
+  /*color: white;*/
+  margin-top: -30vh;
   margin-bottom: -20vh;
   /*background-color: ivory;*/
 }

@@ -22,6 +22,7 @@ https://www.sitepoint.com/easy-form-validation-angularjs-ngmessages/
 - R-Blends logo
 - customize Spectrum's color picker
 - doesn't log you out when you refresh the page
+- make sure whole site is mobile friendly (is there a show-on-small-only?)
 
 COMPLETE: MVP done
 - authentication (log in, sign up, log out)
