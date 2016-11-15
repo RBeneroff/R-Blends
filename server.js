@@ -10,7 +10,7 @@ app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // add in at end!
-// app.use(favicon(__dirname + '/favicon.ico'));
+app.use(favicon(__dirname + '/favicon.ico'));
 
 app.use('/scripts', express.static(__dirname + '/bower_components'));
 
