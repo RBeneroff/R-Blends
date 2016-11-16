@@ -71,26 +71,26 @@
         })
       }
 
-      var loggedIn = function(token, user) {
-        self.signed = user;
-        console.log('refresh');
-        if (localStorage.getItem("token", true)) {
-          console.log("current token after refresh ----> ", localStorage.token);
-
-          return $http({
-            url: `${rootUrl}/users/login`,
-            method: 'POST',
-            data: {user : user}
-          })
-          .then(function(response) {
-            self.user = response.data.user;
-            self.id = response.data.user.id;
-          })
-          // self.success = true;
-          self.login(self.signed);
-        }
-      }
-      loggedIn()
+      // var loggedIn = function(token, user) {
+      //   self.signed = user;
+      //   console.log('refresh');
+      //   if (localStorage.getItem("token", true)) {
+      //     console.log("current token after refresh ----> ", localStorage.token);
+      //     return $http({
+      //       url: `${rootUrl}/users`,
+      //       method: 'GET',
+      //       data: {user : user}
+      //     })
+      //     .then(function(response) {
+      //       self.success = true;
+      //       self.login(self.signed);
+      //       // self.user = response.data.user;
+      //       console.log(self.user, this.user);
+      //       // self.id = response.data.user.id;
+      //     })
+      //   }
+      // }
+      // loggedIn()
 
       this.logout = function(user) {
         console.log('logging out ---->', user);
