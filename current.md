@@ -1,14 +1,15 @@
 # R-Blends - current tasks/bugs/reaches
 
 Working on:
-- add validation to cover scheme name (cant submit without name and at least one colors)
 - need to remove all unnecessary stuff from all_color_schemes
+- on Blend page - when click 'choose' the color updates in the pixel rectangle immediately
+- doesn't log you out when you refresh the page
 
 Bugs to fix:
 - make sure everything is mobile friendly (is there a show-on-small-only?)
 
 Reaches/other feature to implement:
-- on Blend page - when click 'choose' the color updates in the pixel rectangle immediately
+- add validation to saving cover schemes (cant submit without name and at least one colors)
 - be able to change the colors of the website when choosing colors
 - in Settings:
   - be able to create your own customized color scheme for the website
@@ -19,7 +20,6 @@ Reaches/other feature to implement:
 - add validations to forms: (have it shaking - but tell why it failed, shake more than once if doesn't meet validation multiple times) http://demo.geekslabs.com/materialize/v3.1/form-validation.html?action=
 https://www.sitepoint.com/easy-form-validation-angularjs-ngmessages/
 - customize Spectrum's color picker
-- doesn't log you out when you refresh the page
 
 COMPLETE: MVP done
 - authentication (log in, sign up, log out)

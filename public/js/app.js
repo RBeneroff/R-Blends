@@ -3,8 +3,8 @@
     .module('BlenderApp')
     .controller('BlenderController', function($http, $state, $scope) {
       var self = this;
-      // var rootUrl = 'http://localhost:3000'
-      var rootUrl = 'https://r-blends-backend.herokuapp.com'
+      var rootUrl = 'http://localhost:3000'
+      // var rootUrl = 'https://r-blends-backend.herokuapp.com'
 
 // USER FUNCTIONS
 
@@ -57,7 +57,6 @@
             $state.go('blend', {url: '/blend', user: response.data.user})
         })
         .then(function(response) {
-          console.log('hitting this part of promise');
           return $http({
             url: `${rootUrl}/users/${self.id}/color_schemes`,
             method: 'GET'
@@ -71,6 +70,27 @@
           console.log(err);
         })
       }
+
+      var loggedIn = function(token, user) {
+        self.signed = user;
+        console.log('refresh');
+        if (localStorage.getItem("token", true)) {
+          console.log("current token after refresh ----> ", localStorage.token);
+
+          return $http({
+            url: `${rootUrl}/users/login`,
+            method: 'POST',
+            data: {user : user}
+          })
+          .then(function(response) {
+            self.user = response.data.user;
+            self.id = response.data.user.id;
+          })
+          // self.success = true;
+          self.login(self.signed);
+        }
+      }
+      loggedIn()
 
       this.logout = function(user) {
         console.log('logging out ---->', user);
