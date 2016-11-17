@@ -216,8 +216,28 @@ nav {
   border-color: #475D62;
 }
 
-.sp-replacer:hover {
+.sp-replacer:hover,
+.sp-replacer.sp-active,
+.sp-palette-container,
+.sp-picker-container,
+.sp-container {
   border-color: #D6EEFF;
+}
+
+.sp-palette-container,
+.sp-picker-container {
+  background-color: white;
+}
+
+.sp-container button {
+  background: white;
+  font-size: 1em;
+  text-shadow: none;
+  border-radius: 1em;
+  padding-left: .8em;
+  padding-right: .8em;
+  box-shadow: none;
+  outline: none;
 }
 
 .blend {

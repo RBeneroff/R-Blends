@@ -8,11 +8,7 @@
 <input id='colorpicker' />
 <br><br><br><br>
 </div>
-<!-- <div class='flex'>
-<div class='triangle3'></div></div> -->
 <div class='triangle2 hide-on-small-only'></div>
-<!-- <div class='triangle4'></div> -->
-<!-- <input type='color' name='color' id='colorpicker' value='#3355cc'/> -->
 
 <div class='box-container'>
 <div class="pixel" style="background-color:#EAFEFF"></div>
@@ -66,16 +62,13 @@ $("#colorpicker").spectrum({ //spectrum config
     showPalette: true,
     showInput: true,
     showAlpha: true,
-    chooseText: "Choose",
+    chooseText: "ok",
     preferredFormat: "hex",
-    cancelText: "X",
+    cancelText: "cancel",
     togglePaletteOnly: true,
     showPaletteOnly: true,
     togglePaletteMoreText: "More Colors...",
     togglePaletteLessText: "Less Colors...",
-    palette: [
-            //color palettes for Spectrum
-    ],
     change: function(colorSelected, changeColor, changeText) {
         color = colorSelected.toHexString();
     }
