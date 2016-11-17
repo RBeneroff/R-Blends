@@ -1,0 +1,152 @@
+<h3 class='blend'>Blend</h3>
+<br><br>
+<form class="color_scheme_form" ng-submit="blend.addColorScheme(blend.newColorScheme, blend.user.id)">
+
+  <div class='box-container'>
+    <input id='color_one' ng-model='blend.newColorScheme.color_one'/>
+    <input id='color_two' ng-model='blend.newColorScheme.color_two'/>
+    <input id='color_three' ng-model='blend.newColorScheme.color_three'/>
+    <input id='color_four' ng-model='blend.newColorScheme.color_four'/>
+    <input id='color_five' ng-model='blend.newColorScheme.color_five'/>
+  </div>
+
+  <div class="output" id="output"></div>
+    <div class="pixel" id='one' style="background-color:#EAFEFF"></div>
+    <div class="pixel" id='two' style="background-color:#AFBEBF"></div>
+    <div class="pixel" id='three' style="background-color:#757F7F"></div>
+    <div class="pixel" id='four' style="background-color:#3A3F40"></div>
+    <div class="pixel" id='five' style="background-color:#D3E5E5"></div>
+
+<script>
+(function () {
+  var app = {
+    start: function() {
+      this.output = $('#output');
+      this.one = $('#one');
+      this.two = $('#two');
+      this.three = $('#three');
+      this.four = $('#four');
+      this.five = $('#five');
+      var self    = this,
+        initialColor1 = this.one.css('background');
+        initialColor2 = this.two.css('background');
+        initialColor3 = this.three.css('background');
+        initialColor4 = this.four.css('background');
+        initialColor5 = this.five.css('background');
+      var colorPicker = $('#color_one').spectrum({
+          chooseText: 'ok',
+          color:      initialColor1,
+          showPalette: true,
+          showAlpha: true,
+          change:     function(col) { self.onChange1(col.toHexString()); },
+        });
+      var colorPicker = $('#color_two').spectrum({
+        chooseText: 'ok',
+        color:      initialColor2,
+        showPalette: true,
+        showAlpha: true,
+        change:     function(col) { self.onChange2(col.toHexString()); },
+      });
+      var colorPicker = $('#color_three').spectrum({
+        chooseText: 'ok',
+        color:      initialColor3,
+        showPalette: true,
+        showAlpha: true,
+        change:     function(col) { self.onChange3(col.toHexString()); },
+      });
+      var colorPicker = $('#color_four').spectrum({
+        chooseText: 'ok',
+        color:      initialColor4,
+        showPalette: true,
+        showAlpha: true,
+        change:     function(col) { self.onChange4(col.toHexString()); },
+      });
+      var colorPicker = $('#color_five').spectrum({
+        chooseText: 'ok',
+        color:      initialColor5,
+        showPalette: true,
+        showAlpha: true,
+        change:     function(col) { self.onChange5(col.toHexString()); },
+      });
+      this.broadcast(colorPicker.spectrum('get').toHexString());
+    },
+
+    onChange1: function(color) {
+      this.one.css('background', color);
+      this.broadcast(color);
+    },
+    onChange2: function(color) {
+      this.two.css('background', color);
+      this.broadcast(color);
+    },
+    onChange3: function(color) {
+      this.three.css('background', color);
+      this.broadcast(color);
+    },
+    onChange4: function(color) {
+      this.four.css('background', color);
+      this.broadcast(color);
+    },
+    onChange5: function(color) {
+      this.five.css('background', color);
+      this.broadcast(color);
+    },
+
+    broadcast: function(color) {
+      this.output.html('Final color: ' + color);
+    },
+  };
+
+  $(function () {
+    app.start();
+  });
+})();
+</script>
+
+
+
+<!-- <script>
+
+// $("#color_one, #color_two, #color_three, #color_four, #color_five").spectrum({
+//     color: "tinycolor",
+//     clickoutFiresChange: true,
+//     preferredFormat: "hex",
+//     showPalette: true,
+//     showAlpha: true,
+//     showInput: true,
+//     change: function(colorSelected) {
+//         color = colorSelected.toHexString();
+//     }
+// });
+// $('#one, #two, #three, #four, #five').click(function(){
+//     $(this).css('background-color' , color);
+// });
+
+</script> -->
+
+
+
+<!-- UNUSED CODE -->
+
+<!-- <button class="waves-effect waves-light light-blue lighten-4 btn btn" type='submit' ng-click="blend.showColorSchemes(blend.user.id)">Show Color Schemes</button> -->
+
+<!-- <script>
+$("#color_two").spectrum({
+    color: "#f00"
+});
+</script> -->
+<!-- <script>
+$("#color_three").spectrum({
+    color: "#f00"
+});
+</script>
+<script>
+$("#color_four").spectrum({
+    color: "#f00"
+});
+</script>
+<script>
+$("#color_five").spectrum({
+    color: "#f00"
+});
+</script> -->

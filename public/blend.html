@@ -1,6 +1,7 @@
 <h3 class='blend'>Blend</h3>
 <br><br>
 <form class="color_scheme_form" ng-submit="blend.addColorScheme(blend.newColorScheme, blend.user.id)">
+<!-- <div class="container"> -->
   <div class='box-container'>
     <input id='color_one' ng-model='blend.newColorScheme.color_one'/>
     <input id='color_two' ng-model='blend.newColorScheme.color_two'/>
@@ -8,13 +9,7 @@
     <input id='color_four' ng-model='blend.newColorScheme.color_four'/>
     <input id='color_five' ng-model='blend.newColorScheme.color_five'/>
   </div>
-  <!-- <div class='box-container'>
-    <input id='color_one' class="pixel"ng-model='blend.newColorScheme.color_one'/>
-    <input id='color_two' class="pixel"ng-model='blend.newColorScheme.color_two'/>
-    <input id='color_three' class="pixel"ng-model='blend.newColorScheme.color_three'/>
-    <input id='color_four' class="pixel"ng-model='blend.newColorScheme.color_four'/>
-    <input id='color_five' class="pixel" ng-model='blend.newColorScheme.color_five'/>
-  </div> -->
+
   <br>
   <div class='box-container'>
     <div class="pixel" id='one' style="background-color:#EAFEFF"></div>
@@ -23,6 +18,7 @@
     <div class="pixel" id='four' style="background-color:#3A3F40"></div>
     <div class="pixel" id='five' style="background-color:#D3E5E5"></div>
   </div>
+
   <br>
   <div class='container center'>
   <div class="row">
@@ -58,20 +54,22 @@
 
 <!-- SPECTRUM FUNCTIONS -->
 
-<script>
 
-// $("#color_one, #color_two, #color_three, #color_four, #color_five").spectrum({
-//     // color: "red",
-//     color: "tinycolor",
-//     clickoutFiresChange: true,
-//     preferredFormat: "hex",
-//     showPalette: true,
-//     showAlpha: true,
-//     showInput: true,
-//     change: function(color) {
-//         $(this).css("background-color",  color.toHexString());
-//     }
-// });
+
+
+<script>
+$("#color_one, #color_two, #color_three, #color_four, #color_five").spectrum({
+    // color: "red",
+    color: "tinycolor",
+    clickoutFiresChange: true,
+    preferredFormat: "hex",
+    showPalette: true,
+    showAlpha: true,
+    showInput: true,
+    change: function(color) {
+        $(this).css("background-color",  color.toHexString());
+    }
+});
 
 $("#color_one, #color_two, #color_three, #color_four, #color_five").spectrum({
     color: "tinycolor",
@@ -88,29 +86,3 @@ $('#one, #two, #three, #four, #five').click(function(){
     $(this).css('background-color' , color);
 });
 </script>
-
-
-<!-- UNUSED CODE -->
-
-<!-- <button class="waves-effect waves-light light-blue lighten-4 btn btn" type='submit' ng-click="blend.showColorSchemes(blend.user.id)">Show Color Schemes</button> -->
-
-<!-- <script>
-$("#color_two").spectrum({
-    color: "#f00"
-});
-</script> -->
-<!-- <script>
-$("#color_three").spectrum({
-    color: "#f00"
-});
-</script>
-<script>
-$("#color_four").spectrum({
-    color: "#f00"
-});
-</script>
-<script>
-$("#color_five").spectrum({
-    color: "#f00"
-});
-</script> -->

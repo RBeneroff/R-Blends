@@ -1,7 +1,6 @@
 # R-Blends - current tasks/bugs/reaches
 
 Working on:
-- need to remove all unnecessary stuff from all_color_schemes
 - on Blend page - when click 'choose' the color updates in the pixel rectangle immediately
     http://lugolabs.com/articles/71-how-to-use-a-color-picker-in-javascript
     http://jsfiddle.net/ctkY3/768/

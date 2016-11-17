@@ -31,6 +31,10 @@
       url: '/blend',
       templateUrl: 'blend.html'
     })
+    .state('test', {
+      url: '/test',
+      templateUrl: 'test.html'  
+    })
 
     $urlRouterProvider.otherwise('/');
 
