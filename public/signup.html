@@ -20,7 +20,7 @@
         </div>
         <div class="input-field col s12 m6">
           <i class="prefix small material-icons grey-text text-grey darken-4">perm_identity</i><input type="text" class="validate" ng-model="user.username" id='input3' id='input_text' length="10">
-          <label id='label2' for="input_text">Create A Username</label>
+          <label id='label2' for="username">Create A Username</label>
         </div>
         <div class="input-field col s12 m6">
           <i class="prefix small material-icons grey-text text-grey darken-4">lock_outline</i><input id='input4' type="password" class="validate" ng-model="user.password">
@@ -46,3 +46,38 @@
   <div class="pixel" style="background-color:#AFBEBF"></div>
   <div class="pixel" style="background-color:#EAFEFF"></div>
 </div>
+
+
+<!-- <script>
+
+$("#formValidate").validate({
+  rules: {
+    username: {
+      required: true,
+      minlength: 5
+            },
+  email: {
+    required: true,
+    email:true
+            },
+  password: {
+    required: true,
+    minlength: 5
+			},
+        //For custom messages
+  messages: {
+    username:{
+      required: "Enter a username",
+      minlength: "Enter at least 5 characters"
+            },
+        errorElement : 'div',
+        errorPlacement: function(error, element) {
+          var placement = $(element).data('error');
+          if (placement) {
+            $(placement).append(error)
+          } else {
+            error.insertAfter(element);
+          }
+        }
+     }}});
+</script> -->

@@ -39,7 +39,7 @@
 <h5 class='blend'>{{blend.user.username}}'s Color Schemes</h5>
 <div class="showColorSchemes" ng-repeat='color in blend.colorSchemes track by $index' ng-mouseover='hoverIn()' ng-mouseleave='hoverOut()' ng-if='blend.colorSchemes.length >= 1'>
   <div class='box-container'>
-    <div class="pixel" class='saved-schemes' style="background-color:{{color.color_one}}"></div>
+    <div class="pixel" style="background-color:{{color.color_one}}"></div>
     <div class="pixel" style="background-color:{{color.color_two}}"></div>
     <div class="pixel" style="background-color:{{color.color_three}}"></div>
     <div class="pixel" style="background-color:{{color.color_four}}"></div>
@@ -75,38 +75,43 @@
         initialColor5 = this.five.css('background');
       var colorPicker = $('#color_one').spectrum({
           chooseText: 'ok',
-          color:      initialColor1,
+          color: initialColor1,
+          preferredFormat: "hex",
           showPalette: true,
           showAlpha: true,
-          change:     function(col) { self.onChange1(col.toHexString()); },
+          change: function(col) { self.onChange1(col.toHexString()); },
         });
       var colorPicker = $('#color_two').spectrum({
         chooseText: 'ok',
-        color:      initialColor2,
+        color: initialColor2,
+        preferredFormat: "hex",
         showPalette: true,
         showAlpha: true,
-        change:     function(col) { self.onChange2(col.toHexString()); },
+        change: function(col) { self.onChange2(col.toHexString()); },
       });
       var colorPicker = $('#color_three').spectrum({
         chooseText: 'ok',
-        color:      initialColor3,
+        color: initialColor3,
+        preferredFormat: "hex",
         showPalette: true,
         showAlpha: true,
-        change:     function(col) { self.onChange3(col.toHexString()); },
+        change: function(col) { self.onChange3(col.toHexString()); },
       });
       var colorPicker = $('#color_four').spectrum({
         chooseText: 'ok',
-        color:      initialColor4,
+        color: initialColor4,
+        preferredFormat: "hex",
         showPalette: true,
         showAlpha: true,
-        change:     function(col) { self.onChange4(col.toHexString()); },
+        change: function(col) { self.onChange4(col.toHexString()); },
       });
       var colorPicker = $('#color_five').spectrum({
         chooseText: 'ok',
-        color:      initialColor5,
+        color: initialColor5,
+        preferredFormat: "hex",
         showPalette: true,
         showAlpha: true,
-        change:     function(col) { self.onChange5(col.toHexString()); },
+        change: function(col) { self.onChange5(col.toHexString()); },
       });
       this.broadcast(colorPicker.spectrum('get').toHexString());
     },

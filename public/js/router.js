@@ -33,7 +33,7 @@
     })
     .state('test', {
       url: '/test',
-      templateUrl: 'test.html'  
+      templateUrl: 'test.html'
     })
 
     $urlRouterProvider.otherwise('/');
