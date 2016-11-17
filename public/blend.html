@@ -10,7 +10,9 @@
     <input id='color_five' ng-model='blend.newColorScheme.color_five'/>
   </div>
   <br>
-  <div class="output" id="output"></div>
+  <div class='container'>
+    <div class="output" id="output"></div>
+  </div>
   <br>
   <div class='box-container'>
     <div class="pixel" id='one' style="background-color:#EAFEFF"></div>
@@ -131,7 +133,7 @@
     },
 
     broadcast: function(color) {
-      this.output.html('Final color: ' + color);
+      this.output.html('Current color: ' + color);
     },
   };
 
