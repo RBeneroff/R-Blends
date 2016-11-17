@@ -54,6 +54,14 @@
           console.log(self.id, 'id of current user');
           console.log('token ---->', response.data.token);
           localStorage.setItem('token', JSON.stringify(response.data.token))
+          // console.log('user ---->', response.data.user);
+          // localStorage.setItem('user', JSON.stringify(response.data.user))
+          // console.log('id ---->', response.data.user.id);
+          // localStorage.setItem('id', JSON.stringify(response.data.user.id))
+          // console.log('username ---->', response.data.user.username);
+          // localStorage.setItem('username', JSON.stringify(response.data.user.username))
+          // console.log('password ---->', response.data.user.password_digest);
+          // localStorage.setItem('password', JSON.stringify(response.data.user.password_digest))
             $state.go('blend', {url: '/blend', user: response.data.user})
         })
         .then(function(response) {
@@ -71,23 +79,22 @@
         })
       }
 
-      // var loggedIn = function(token, user) {
-      //   self.signed = user;
+      // var loggedIn = function() {
       //   console.log('refresh');
       //   if (localStorage.getItem("token", true)) {
       //     console.log("current token after refresh ----> ", localStorage.token);
-      //     return $http({
-      //       url: `${rootUrl}/users`,
-      //       method: 'GET',
-      //       data: {user : user}
-      //     })
-      //     .then(function(response) {
-      //       self.success = true;
-      //       self.login(self.signed);
-      //       // self.user = response.data.user;
-      //       console.log(self.user, this.user);
-      //       // self.id = response.data.user.id;
-      //     })
+      //     // console.log("current user after refresh ----> ", localStorage.user);
+      //     // console.log("current user after refresh ----> ", localStorage.id);
+      //     console.log("current username after refresh ----> ", localStorage.username);
+      //     console.log("current password after refresh ----> ", localStorage.password);
+      //       return $http({
+      //         url: `${rootUrl}/users/login`,
+      //         method: 'POST',
+      //         data: {username : localStorage.username, password : localStorage.password}
+      //       })
+      //       .then(function(response) {
+      //         console.log(response, 'after refresh');
+      //       })
       //   }
       // }
       // loggedIn()
@@ -98,6 +105,8 @@
         self.success = null;
         self.repeatText = "";
         localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        localStorage.removeItem('id');
         $state.go('home', {url: '/'});
       }
 

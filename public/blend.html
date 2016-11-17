@@ -8,6 +8,13 @@
     <input id='color_four' ng-model='blend.newColorScheme.color_four'/>
     <input id='color_five' ng-model='blend.newColorScheme.color_five'/>
   </div>
+  <!-- <div class='box-container'>
+    <input id='color_one' class="pixel"ng-model='blend.newColorScheme.color_one'/>
+    <input id='color_two' class="pixel"ng-model='blend.newColorScheme.color_two'/>
+    <input id='color_three' class="pixel"ng-model='blend.newColorScheme.color_three'/>
+    <input id='color_four' class="pixel"ng-model='blend.newColorScheme.color_four'/>
+    <input id='color_five' class="pixel" ng-model='blend.newColorScheme.color_five'/>
+  </div> -->
   <br>
   <div class='box-container'>
     <div class="pixel" id='one' style="background-color:#EAFEFF"></div>
@@ -52,6 +59,20 @@
 <!-- SPECTRUM FUNCTIONS -->
 
 <script>
+
+// $("#color_one, #color_two, #color_three, #color_four, #color_five").spectrum({
+//     // color: "red",
+//     color: "tinycolor",
+//     clickoutFiresChange: true,
+//     preferredFormat: "hex",
+//     showPalette: true,
+//     showAlpha: true,
+//     showInput: true,
+//     change: function(color) {
+//         $(this).css("background-color",  color.toHexString());
+//     }
+// });
+
 $("#color_one, #color_two, #color_three, #color_four, #color_five").spectrum({
     color: "tinycolor",
     clickoutFiresChange: true,

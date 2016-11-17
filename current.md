@@ -3,7 +3,8 @@
 Working on:
 - need to remove all unnecessary stuff from all_color_schemes
 - on Blend page - when click 'choose' the color updates in the pixel rectangle immediately
-- doesn't log you out when you refresh the page
+    http://lugolabs.com/articles/71-how-to-use-a-color-picker-in-javascript
+    http://jsfiddle.net/ctkY3/768/
 
 Bugs to fix:
 - make sure everything is mobile friendly (is there a show-on-small-only?)
@@ -20,6 +21,9 @@ Reaches/other feature to implement:
 - add validations to forms: (have it shaking - but tell why it failed, shake more than once if doesn't meet validation multiple times) http://demo.geekslabs.com/materialize/v3.1/form-validation.html?action=
 https://www.sitepoint.com/easy-form-validation-angularjs-ngmessages/
 - customize Spectrum's color picker
+
+Stumped on:
+- user doesn't persist on page refresh -- token still in localStorage, but doesn't recognize user
 
 COMPLETE: MVP done
 - authentication (log in, sign up, log out)
