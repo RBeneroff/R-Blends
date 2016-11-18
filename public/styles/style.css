@@ -50,9 +50,9 @@ nav {
 /*HOME PAGE*/
 
 #logo {
-  margin-top: -15vh;
+  /*margin-top: -10vh;*/
   margin-bottom: -3vh;
-  zoom: .6;
+  zoom: .5;
 }
 
 .triangle,
@@ -69,7 +69,7 @@ nav {
 .home,
 .explore {
   text-align: center;
-  background: ivory;
+  background: white;
 }
 
 .text {
@@ -90,8 +90,8 @@ nav {
   /*background: black;*/
   /*padding: 5vh;*/
   /*color: white;*/
-  margin-top: -30vh;
-  margin-bottom: -20vh;
+  margin-top: -32vh;
+  /*margin-bottom: -20vh;*/
   /*background-color: ivory;*/
 }
 
@@ -100,7 +100,7 @@ nav {
   height: 0;
   border-left: 240px solid transparent;
   border-right: 240px solid transparent;
-  border-top: 280px solid #D6EEFF;
+  border-top: 280px solid #EAFEFF;
   z-index: -1;
 }
 
@@ -109,7 +109,7 @@ nav {
   height: 0;
   border-left: 150px solid transparent;
   border-right: 150px solid transparent;
-  border-bottom: 200px solid #D6EEFF;
+  border-bottom: 200px solid #EAFEFF;
   z-index: -1;
   margin-left: 60%;
   /*margin-top: -30vh;*/
@@ -192,13 +192,19 @@ nav {
 /*EXPLORE PAGE */
 
 .e-buttons {
-  background-color: ivory;
+  background-color: white;
   text-align: center;
 }
 
 .explore-container {
   /*padding: 10vh 0 10vh 0;*/
   text-align: center;
+}
+
+/*LOGIN PAGE*/
+.login,
+.signup {
+  margin-top: -25vh;
 }
 
 /*BLEND PAGE*/
