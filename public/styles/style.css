@@ -333,8 +333,15 @@ nav {
 
 /*SETTINGS PAGE*/
 
+/**,
+*:before,
+*:after {
+  box-sizing: inherit;
+}*/
+
 .footer {
   position: absolute;
+  right: 0;
   left: 0;
   bottom: 0;
   height: 75px;
