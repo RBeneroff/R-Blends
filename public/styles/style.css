@@ -100,7 +100,7 @@ nav {
   height: 0;
   border-left: 240px solid transparent;
   border-right: 240px solid transparent;
-  border-top: 280px solid #EAFEFF;
+  border-top: 280px solid #ebf6f9;
   z-index: -1;
 }
 
@@ -109,7 +109,7 @@ nav {
   height: 0;
   border-left: 150px solid transparent;
   border-right: 150px solid transparent;
-  border-bottom: 200px solid #EAFEFF;
+  border-bottom: 200px solid #8cbbd7;
   z-index: -1;
   margin-left: 60%;
   /*margin-top: -30vh;*/
