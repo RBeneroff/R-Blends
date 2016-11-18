@@ -38,13 +38,13 @@ nav {
 #color2:hover,
 #color3:hover,
 #color4:hover {
-  color: #D6EEFF;
+  color: #8cbbd7;
   background-color: white;
 }
 
 .nav-link:hover {
   background-color: white;
-  color: #D6EEFF;
+  color: #8cbbd7;
 }
 
 /*HOME PAGE*/
@@ -101,6 +101,15 @@ nav {
   border-left: 240px solid transparent;
   border-right: 240px solid transparent;
   border-top: 280px solid #ebf6f9;
+  z-index: -1;
+}
+
+.triangle3 {
+  width: 0;
+  height: 0;
+  border-left: 440px solid transparent;
+  border-right: 440px solid transparent;
+  border-top: 480px solid #ebf6f9;
   z-index: -1;
 }
 
@@ -204,7 +213,7 @@ nav {
 /*LOGIN PAGE*/
 .login,
 .signup {
-  margin-top: -25vh;
+  margin-top: -40vh;
 }
 
 /*BLEND PAGE*/
