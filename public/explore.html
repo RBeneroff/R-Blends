@@ -1,21 +1,16 @@
-<div class='explore'>
-<div class='triangle3 hide-on-small-only'></div>
+<div class='explore hide-on-small-only'>
+<div class='triangle3'></div>
   <br>
 <div id='heading2'>
 <h2 class='text hide-on-small-only'>Explore</h2>
-<h5 class='text hide-on-small-only'>recent color schemes</h5>
-
-<br><br><br><br>
+<h5 class='text'>See what other members are doing</h5>
 </div>
-<!-- <div class='triangle2 hide-on-small-only'></div> -->
 </div>
 
 <div class='explore-container'>
-  <br>
-<h5>See what other members are doing</h5>
-<br>
-<div class="showAllColorSchemes" ng-repeat='color in blend.allColorSchemes | orderBy:random | limitTo: -10' ng-mouseover='hoverIn()' ng-mouseleave='hoverOut()'>
-  <div class='box-container'>
+<br><br>
+<div class="showAllColorSchemes" ng-repeat='color in blend.allColorSchemes | orderBy:random | limitTo: -15' ng-mouseover='hoverIn()' ng-mouseleave='hoverOut()'>
+  <div class='box2-container'>
     <div class="pixel" style="background-color:{{color.color_one}}"></div>
     <div class="pixel" style="background-color:{{color.color_two}}"></div>
     <div class="pixel" style="background-color:{{color.color_three}}"></div>

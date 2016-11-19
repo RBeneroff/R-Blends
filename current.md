@@ -2,9 +2,8 @@
 
 Working on:
 - put all JS in script tags into separate file
-- redo home screen
 - do validations to saving cover schemes (cant submit without name and at least one colors)
-- make sure everything is mobile friendly (is there a show-on-small-only?)
+- work on sticky footer
 
 
 Stumped on/Would like to add:

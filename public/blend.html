@@ -1,8 +1,7 @@
 <h3 class='blend'>Blend</h3>
 <br><br>
 <form class="color_scheme_form" ng-submit="blend.addColorScheme(blend.newColorScheme, blend.user.id)">
-<!-- <div class="container"> -->
-  <div class='box-container'>
+  <div class='box2-container'>
     <input id='color_one' ng-model='blend.newColorScheme.color_one'/>
     <input id='color_two' ng-model='blend.newColorScheme.color_two'/>
     <input id='color_three' ng-model='blend.newColorScheme.color_three'/>
@@ -38,7 +37,7 @@
 <br><br>
 <h5 class='blend'>{{blend.user.username}}'s Color Schemes</h5>
 <div class="showColorSchemes" ng-repeat='color in blend.colorSchemes track by $index' ng-mouseover='hoverIn()' ng-mouseleave='hoverOut()' ng-if='blend.colorSchemes.length >= 1'>
-  <div class='box-container'>
+  <div class='box2-container'>
     <div class="pixel" style="background-color:{{color.color_one}}"></div>
     <div class="pixel" style="background-color:{{color.color_two}}"></div>
     <div class="pixel" style="background-color:{{color.color_three}}"></div>
@@ -147,34 +146,3 @@
   });
 })();
 </script>
-
-
-<!-- <script>
-$("#color_one, #color_two, #color_three, #color_four, #color_five").spectrum({
-    // color: "red",
-    color: "tinycolor",
-    clickoutFiresChange: true,
-    preferredFormat: "hex",
-    showPalette: true,
-    showAlpha: true,
-    showInput: true,
-    change: function(color) {
-        $(this).css("background-color",  color.toHexString());
-    }
-});
-
-$("#color_one, #color_two, #color_three, #color_four, #color_five").spectrum({
-    color: "tinycolor",
-    clickoutFiresChange: true,
-    preferredFormat: "hex",
-    showPalette: true,
-    showAlpha: true,
-    showInput: true,
-    change: function(colorSelected) {
-        color = colorSelected.toHexString();
-    }
-});
-$('#one, #two, #three, #four, #five').click(function(){
-    $(this).css('background-color' , color);
-});
-</script> -->
