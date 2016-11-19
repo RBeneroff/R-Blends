@@ -11,6 +11,7 @@ Back-end: https://github.com/RBeneroff/R-Blends-BackEnd
 Technologies Used: Rails, Ruby, AngularJS, PostgreSQL, Javascript, jQuery, HTML, CSS, Express, NodeJS, Materialize (and full CRUD functionality with RESTful routes)
 
 A color scheme/blender app where users can create their own color schemes and save them.
+
 As a visitor, you have access to the home and explore page. On the home page you can pick any color from the color selector and change the color of anything on the page (except the logo and nav bar) On the explore page, you can see the 15 most recent color schemes created by members of R-Blends. If you would like to become a member and start blending you can sign up on the Sign Up page. You must provide an email address, a unique username and a password in order to join. Once signed up, are you redirected to the Blend page. Here you can start blending colors and creating color schemes. Once you create a scheme you'd like to save, simply click the Save Color Scheme button and your colors are immediately added to your Color Scheme List below. You may delete color schemes at any time. As a member you have access to the Settings Page. Here you can update your email address and password as well as clear your entire color scheme history.
 
 Used the Spectrum plugin:
@@ -31,4 +32,7 @@ Things I'd like to add:
 - Members can save color schemes that they like from the Explore page
 - Members can re-visit and old color scheme and update its colors
 
-Unsolved Problems:
+Unsolved Problems/Didn't Get To:
+- put all JS in script tags into separate file
+- tell which input field has the error - validation
+- user doesn't persist on page refresh -- token still in localStorage, but doesn't recognize user

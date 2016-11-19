@@ -1,12 +1,4 @@
-# R-Blends - current tasks/bugs/reaches
-
-Working on:
-- put all JS in script tags into separate file
-- tell which input field has the error - validation
-
-
-Stumped on/Would like to add:
-- user doesn't persist on page refresh -- token still in localStorage, but doesn't recognize user
+# R-Blends
 
 Articles:
 - http://lugolabs.com/articles/71-how-to-use-a-color-picker-in-javascript
