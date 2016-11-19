@@ -3,8 +3,8 @@
     .module('BlenderApp')
     .controller('BlenderController', function($http, $state, $scope) {
       var self = this;
-      var rootUrl = 'http://localhost:3000'
-      // var rootUrl = 'https://r-blends-backend.herokuapp.com'
+      // var rootUrl = 'http://localhost:3000'
+      var rootUrl = 'https://r-blends-backend.herokuapp.com'
 
 // USER FUNCTIONS
 
@@ -77,26 +77,6 @@
           console.log(err);
         })
       }
-
-      // var loggedIn = function() {
-      //   console.log('refresh');
-      //   if (localStorage.getItem("token", true)) {
-      //     console.log("current token after refresh ----> ", localStorage.token);
-      //     // console.log("current user after refresh ----> ", localStorage.user);
-      //     // console.log("current user after refresh ----> ", localStorage.id);
-      //     console.log("current username after refresh ----> ", localStorage.username);
-      //     console.log("current password after refresh ----> ", localStorage.password);
-      //       return $http({
-      //         url: `${rootUrl}/users/login`,
-      //         method: 'POST',
-      //         data: {username : localStorage.username, password : localStorage.password}
-      //       })
-      //       .then(function(response) {
-      //         console.log(response, 'after refresh');
-      //       })
-      //   }
-      // }
-      // loggedIn()
 
       this.logout = function(user) {
         console.log('logging out ---->', user);
@@ -194,7 +174,6 @@
           method: 'DELETE'
         })
         .then(function(response) {
-          // console.log(response);
           return response;
         })
         .then(function(response) {
@@ -304,35 +283,3 @@
 
     });
 })() //IIFE
-
-
-//UNUSED CODE
-
-// this.showColorSchemes = function(id) {
-//   console.log('user id', self.id);
-//   return $http({
-//     url: `${rootUrl}/users/${id}/color_schemes`,
-//     method: 'GET'
-//   })
-//   .then(function(response) {
-//     console.log(response);
-//     self.colorSchemes = response.data.colorSchemes;
-//   })
-// }
-
-// newColorScheme = {
-//   color_scheme_name: color_scheme_name,
-//   color_one: color_one,
-//   color_two: color_two,
-//   color_three: color_three,
-//   color_four: color_four,
-//   color_five: color_five,
-// }
-
-// .then(function(response) {
-//   return $http({
-//     url: `${rootUrl}/all_color_schemes`,
-//     method: 'POST',
-//     data: {all_color_scheme: newColorScheme}
-//   })
-// })
