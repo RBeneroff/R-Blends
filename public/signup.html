@@ -1,38 +1,39 @@
 <div class='content'>
-<div class='triangle3'></div>
+  <div class='triangle3'></div>
 
-<br><br><br><br><br><br>
+  <br><br><br><br><br><br>
 
-<div class='container signup'>
-<h4>Sign Up</h4>
+  <div class='container signup'>
+    <h4>Sign Up</h4>
 
-<div class="row">
-    <form class="col s12" ng-submit="blend.signup(user)">
-      <div class="row">
-        <div class="input-field col s12">
-          <i class="prefix small material-icons grey-text text-grey darken-4">email</i><input id="input2" id="email" type="email" class="validate" ng-model="user.email_address">
-          <label id='label2' for="email">Please Enter Email Address</label>
-        </div>
-        <div class="input-field col s12 m6">
-          <i class="prefix small material-icons grey-text text-grey darken-4">perm_identity</i><input type="text" class="validate" ng-model="user.username" id='input3' id='input_text' length="10">
-          <label id='label2' for="username">Create A Username</label>
-        </div>
-        <div class="input-field col s12 m6">
-          <i class="prefix small material-icons grey-text text-grey darken-4">lock_outline</i><input id='input4' type="password" class="validate" ng-model="user.password">
-          <label id='label4' for="password">Create A Password</label>
-        </div>
+    <div class="row">
+        <form class="col s12" ng-submit="blend.signup(user)">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="prefix small material-icons grey-text text-grey darken-4">email</i><input id="input2" id="email" type="email" class="validate" ng-model="user.email_address">
+              <label id='label2' for="email">Please Enter Email Address</label>
+            </div>
+            <div class="input-field col s12 m6">
+              <i class="prefix small material-icons grey-text text-grey darken-4">perm_identity</i><input type="text" class="validate" ng-model="user.username" id='input3' id='input_text' length="10">
+              <label id='label2' for="username">Create A Username</label>
+            </div>
+            <div class="input-field col s12 m6">
+              <i class="prefix small material-icons grey-text text-grey darken-4">lock_outline</i><input id='input4' type="password" class="validate" ng-model="user.password">
+              <label id='label4' for="password">Create A Password</label>
+            </div>
+          </div>
+          <button class="btn waves-effect waves-light  blue-grey lighten-4" type="submit" name="action">Sign Up</button>
+        </form>
       </div>
-      <button class="btn waves-effect waves-light  blue-grey lighten-4" type="submit" name="action">Sign Up</button>
-    </form>
+
+    <br><br><br>
+
+    <h5>Already A Member?</h5>
+    <button class="btn waves-effect waves-light blue-grey lighten-4" ui-sref='login'>Log In</button>
+
   </div>
+  <br><br><br>
 
-<br><br><br>
-
-  <h5>Already A Member?</h5>
-  <button class="btn waves-effect waves-light blue-grey lighten-4" ui-sref='login'>Log In</button>
-
-</div>
-<br><br><br>
 </div>
 
 <div class='box-container footer'>

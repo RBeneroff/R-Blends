@@ -53,14 +53,6 @@
           console.log(self.id, 'id of current user');
           console.log('token ---->', response.data.token);
           localStorage.setItem('token', JSON.stringify(response.data.token))
-          // console.log('user ---->', response.data.user);
-          // localStorage.setItem('user', JSON.stringify(response.data.user))
-          // console.log('id ---->', response.data.user.id);
-          // localStorage.setItem('id', JSON.stringify(response.data.user.id))
-          // console.log('username ---->', response.data.user.username);
-          // localStorage.setItem('username', JSON.stringify(response.data.user.username))
-          // console.log('password ---->', response.data.user.password_digest);
-          // localStorage.setItem('password', JSON.stringify(response.data.user.password_digest))
             $state.go('blend', {url: '/blend', user: response.data.user})
         })
         .then(function(response) {
@@ -199,86 +191,6 @@
       $scope.hoverOut = function(){
           this.showName = false;
       };
-
-
-// COLOR PICKER FUNCTIONS
-
-    // this.start = function() {
-    //   this.output = $('#output');
-    //   this.one = $('#one');
-    //   this.two = $('#two');
-    //   this.three = $('#three');
-    //   this.four = $('#four');
-    //   this.five = $('#five');
-    //   var self    = this,
-    //     initialColor1 = this.one.css('background');
-    //     initialColor2 = this.two.css('background');
-    //     initialColor3 = this.three.css('background');
-    //     initialColor4 = this.four.css('background');
-    //     initialColor5 = this.five.css('background');
-    //   var colorPicker = $('#color_one').spectrum({
-    //       chooseText: 'ok',
-    //       color:      initialColor1,
-    //       showPalette: true,
-    //       showAlpha: true,
-    //       change:     function(col) { self.onChange1(col.toHexString()); },
-    //     });
-    //   var colorPicker = $('#color_two').spectrum({
-    //     chooseText: 'ok',
-    //     color:      initialColor2,
-    //     showPalette: true,
-    //     showAlpha: true,
-    //     change:     function(col) { self.onChange2(col.toHexString()); },
-    //   });
-    //   var colorPicker = $('#color_three').spectrum({
-    //     chooseText: 'ok',
-    //     color:      initialColor3,
-    //     showPalette: true,
-    //     showAlpha: true,
-    //     change:     function(col) { self.onChange3(col.toHexString()); },
-    //   });
-    //   var colorPicker = $('#color_four').spectrum({
-    //     chooseText: 'ok',
-    //     color:      initialColor4,
-    //     showPalette: true,
-    //     showAlpha: true,
-    //     change:     function(col) { self.onChange4(col.toHexString()); },
-    //   });
-    //   var colorPicker = $('#color_five').spectrum({
-    //     chooseText: 'ok',
-    //     color:      initialColor5,
-    //     showPalette: true,
-    //     showAlpha: true,
-    //     change:     function(col) { self.onChange5(col.toHexString()); },
-    //   });
-    //   this.broadcast(colorPicker.spectrum('get').toHexString());
-    // }
-    //
-    // onChange1 = function(color) {
-    //   this.one.css('background', color);
-    //   this.broadcast(color);
-    // }
-    // onChange2 = function(color) {
-    //   this.two.css('background', color);
-    //   this.broadcast(color);
-    // }
-    // onChange3 = function(color) {
-    //   this.three.css('background', color);
-    //   this.broadcast(color);
-    // }
-    // onChange4 = function(color) {
-    //   this.four.css('background', color);
-    //   this.broadcast(color);
-    // }
-    // onChange5 = function(color) {
-    //   this.five.css('background', color);
-    //   this.broadcast(color);
-    // }
-    // broadcast = function(color) {
-    //   this.output.html('Current color: ' + color);
-    // }
-
-
 
 
     });
