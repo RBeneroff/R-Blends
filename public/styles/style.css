@@ -227,6 +227,11 @@ nav {
   margin-top: -40vh;
 }
 
+.content {
+  min-height: calc(100vh - 70px)
+}
+
+
 /*BLEND PAGE*/
 
 .output {
@@ -360,10 +365,10 @@ nav {
 }*/
 
 .footer {
-  position: absolute;
+  /*position: absolute;
   right: 0;
   left: 0;
-  bottom: 0;
+  bottom: 0;*/
   height: 75px;
-  width: 100%;
+  /*width: 100%;*/
 }

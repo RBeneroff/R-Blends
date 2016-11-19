@@ -3,8 +3,8 @@
     .module('BlenderApp')
     .controller('BlenderController', function($http, $state, $scope) {
       var self = this;
-      // var rootUrl = 'http://localhost:3000'
-      var rootUrl = 'https://r-blends-backend.herokuapp.com'
+      var rootUrl = 'http://localhost:3000'
+      // var rootUrl = 'https://r-blends-backend.herokuapp.com'
 
 // USER FUNCTIONS
 
@@ -157,10 +157,14 @@
           data: {color_scheme: newColorScheme}
         })
         .then(function(response) {
-          console.log(response);
-          console.log('newColorScheme ---->', newColorScheme)
-          self.colorSchemes.push(newColorScheme);
-          self.newColorScheme = '';
+          if (response.data.status === 422) {
+            $('#input7').addClass('animated shake');
+          } else {
+            console.log(response);
+            console.log('newColorScheme ---->', newColorScheme)
+            self.colorSchemes.push(newColorScheme);
+            self.newColorScheme = '';
+          }
         })
         .catch(function(err) {
           console.log(err);
