@@ -79,7 +79,6 @@ nav {
   flex-flow: row;
   flex-wrap: wrap;
   display: flex;
-  /*justify-content: space-around; */
   align-items: stretch;
   height: 100%;
 }
@@ -162,7 +161,6 @@ nav {
   height:155px;
   flex-basis: 60%;
   justify-content: center;
-  /*border: 5px solid #ebf6f9;*/
 }
 
 .triangle3,
@@ -231,12 +229,10 @@ nav {
   min-height: calc(100vh - 70px)
 }
 
-
 /*BLEND PAGE*/
 
 .output {
   padding: 1em;
-  /*border-bottom: 2px dashed #42595E;*/
   text-align: center;
   text-transform: uppercase;
 }
@@ -298,6 +294,7 @@ nav {
 .animate-show.ng-hide {
   opacity: 0;
 }
+
 /*FROM http://plnkr.co/edit/eGohFqiGKmkonmLwT3g1?p=preview*/
 
 .no-schemes {
@@ -306,7 +303,6 @@ nav {
 
 /*FORM SPECIFIC CSS*/
 
-/*.input-field:focus,*/
 #input:focus,
 #input1:focus,
 #input2:focus,
@@ -344,31 +340,8 @@ nav {
   color: gray;
 }
 
-/*i.icon-blue {
-  color: blue;
-}
-
-.material-icons.active {
-      color: #353B40;
-    }*/
-
-/*i.icon-blue.active {
-  color: #353B40;
-}*/
-
 /*SETTINGS PAGE*/
 
-/**,
-*:before,
-*:after {
-  box-sizing: inherit;
-}*/
-
 .footer {
-  /*position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 0;*/
   height: 75px;
-  /*width: 100%;*/
 }

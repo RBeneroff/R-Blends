@@ -2,7 +2,6 @@
 
 Working on:
 - put all JS in script tags into separate file
-- work on sticky footer
 - tell which input field has the error - validation
 
 
