@@ -8,7 +8,6 @@ Working on:
 Stumped on/Would like to add:
 - user doesn't persist on page refresh -- token still in localStorage, but doesn't recognize user
 
-
 Articles:
 - http://lugolabs.com/articles/71-how-to-use-a-color-picker-in-javascript
 - http://jsfiddle.net/ctkY3/768/
