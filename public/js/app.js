@@ -3,8 +3,8 @@
     .module('BlenderApp')
     .controller('BlenderController', function($http, $state, $scope) {
       var self = this;
-      // var rootUrl = 'http://localhost:3000'
-      var rootUrl = 'https://r-blends-backend.herokuapp.com'
+      var rootUrl = 'http://localhost:3000'
+      // var rootUrl = 'https://r-blends-backend.herokuapp.com'
 
 // USER FUNCTIONS
 
@@ -53,6 +53,7 @@
           console.log(self.id, 'id of current user');
           console.log('token ---->', response.data.token);
           localStorage.setItem('token', JSON.stringify(response.data.token))
+          localStorage.setItem('user_id', JSON.stringify(response.data.user.id));
             $state.go('blend', {url: '/blend', user: response.data.user})
         })
         .then(function(response) {
@@ -195,3 +196,33 @@
 
     });
 })() //IIFE
+
+
+//unused code for refresh
+//
+// self.currentUserCheck = function(userId) {
+//     if (localStorage.user_id == userId.toString()) {
+//       self.isUser = true;
+//     }
+//     else {
+//       self.isUser = false;
+//     }
+// }
+//
+// self.getUserFromLocalStorage = function() {
+//   $http({
+//     method: 'GET',
+//     headers:   {'Authorization': `Bearer ${JSON.stringify(localStorage.getItem('token'))}`},
+//     url: `${rootUrl}/users/current-user`
+//   })
+//   .then(function(response){
+//     self.user = response.data.user
+//     console.log(self.user);
+//     // self.getOrders();
+//     $state.go('home');
+//   })
+//   .catch(function(err) {
+//     console.log(err);
+//   })
+//
+// }
