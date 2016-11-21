@@ -29,9 +29,9 @@ Wireframes:
 - http://i.imgur.com/OG3ZHf7.png (logo)
 - http://i.imgur.com/ABTmKVa.png (logo)
 
-![Mobile Friendly](http://i.imgur.com/Tf23DQl.png)
-![Mobile Friendly](http://i.imgur.com/dYRwZ2l.png)
-![Mobile Friendly](http://i.imgur.com/Ipd5otl.png)
+![Mobile Friendly](http://i.imgur.com/Tf23DQl.png | width=40)
+![Mobile Friendly](http://i.imgur.com/dYRwZ2l.png | width=40)
+![Mobile Friendly](http://i.imgur.com/Ipd5otl.png | width=40)
 
 Things I'd like to add:
 - Members can customize their site's colors
