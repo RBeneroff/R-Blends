@@ -87,17 +87,19 @@
         initialColor4 = this.four.css('background');
         initialColor5 = this.five.css('background');
       var colorPicker = $('#color_one').spectrum({
-          chooseText: 'ok',
-          color: initialColor1,
-          preferredFormat: "hex",
-          showPalette: true,
-          showAlpha: true,
-          change: function(col) { self.onChange1(col.toHexString()); },
-        });
+        chooseText: 'ok',
+        color: initialColor1,
+        preferredFormat: "hex",
+        showInput: true,
+        showPalette: true,
+        showAlpha: true,
+        change: function(col) { self.onChange1(col.toHexString()); },
+      });
       var colorPicker = $('#color_two').spectrum({
         chooseText: 'ok',
         color: initialColor2,
         preferredFormat: "hex",
+        showInput: true,
         showPalette: true,
         showAlpha: true,
         change: function(col) { self.onChange2(col.toHexString()); },
@@ -106,6 +108,7 @@
         chooseText: 'ok',
         color: initialColor3,
         preferredFormat: "hex",
+        showInput: true,
         showPalette: true,
         showAlpha: true,
         change: function(col) { self.onChange3(col.toHexString()); },
@@ -114,6 +117,7 @@
         chooseText: 'ok',
         color: initialColor4,
         preferredFormat: "hex",
+        showInput: true,
         showPalette: true,
         showAlpha: true,
         change: function(col) { self.onChange4(col.toHexString()); },
@@ -122,6 +126,7 @@
         chooseText: 'ok',
         color: initialColor5,
         preferredFormat: "hex",
+        showInput: true,
         showPalette: true,
         showAlpha: true,
         change: function(col) { self.onChange5(col.toHexString()); },
