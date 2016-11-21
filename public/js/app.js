@@ -163,6 +163,16 @@
             self.newColorScheme = '';
           }
         })
+        .then(function(response) {
+          return $http({
+            url: `${rootUrl}/users/${self.id}/color_schemes`,
+            method: 'GET'
+          })
+        })
+        .then(function(response) {
+          console.log(response);
+          self.colorSchemes = response.data.colorSchemes;
+        })
         .catch(function(err) {
           console.log(err);
         })
