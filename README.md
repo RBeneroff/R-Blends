@@ -29,6 +29,10 @@ Wireframes:
 - http://i.imgur.com/OG3ZHf7.png (logo)
 - http://i.imgur.com/ABTmKVa.png (logo)
 
+![Mobile Friendly](http://i.imgur.com/Tf23DQl.png)
+![Mobile Friendly](http://i.imgur.com/dYRwZ2l.png)
+![Mobile Friendly](http://i.imgur.com/Ipd5otl.png)
+
 Things I'd like to add:
 - Members can customize their site's colors
 - Members can save color schemes that they like from the Explore page
