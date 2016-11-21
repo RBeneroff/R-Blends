@@ -100,6 +100,7 @@ nav {
   border-right: 280px solid transparent;
   border-top: 280px solid #ebf6f9;
   z-index: -1;
+  margin-bottom: -20vh;
 }
 
 /*.triangle2 {
@@ -162,6 +163,10 @@ nav {
   justify-content: center;
 }
 
+.mobile {
+  flex-basis: 100%;
+}
+
 .triangle3,
 .text,
 .pixel,
@@ -183,7 +188,6 @@ nav {
   text-align: center;
 }
 
-
 /*EXPLORE PAGE */
 
 .box2-container {
@@ -199,8 +203,8 @@ nav {
 }
 
 #heading2 {
-  margin-top: -32vh;
-  margin-bottom: 10vh;
+  margin-top: -8vh;
+  margin-bottom: 8vh;
 }
 
 .pixel {
@@ -221,7 +225,9 @@ nav {
 /*LOGIN PAGE*/
 .login,
 .signup {
-  margin-top: -40vh;
+  /*margin-top: -40vh;*/
+  margin-top: -10vh;
+  /*margin-bottom: 5vh;*/
 }
 
 .content {
