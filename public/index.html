@@ -40,7 +40,9 @@
                 <li><a class='nav-link' ui-sref='explore' ui-sref-active='active' ng-click="blend.showAllColorSchemes(all_color_schemes)">Explore</a></li>
                 <li ng-show='blend.user'><a class='nav-link' class="black-text" ui-sref='blend' ui-sref-active='active'>Blend</a></li>
                 <li ng-hide='blend.user'><a class="dropdown-button nav-link" href="#!" data-activates="dropdown1">Join<i class="material-icons right">arrow_drop_down</i></a></li>
-                <li ng-show='blend.user'><a class="dropdown-button nav-link" href="#!" data-activates="dropdown2">{{blend.user.username}}<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li ng-show='blend.user' class='hide-on-small-only'><a class="dropdown-button nav-link" href="#!" data-activates="dropdown2">{{blend.user.username}}<i class="material-icons right">arrow_drop_down</i></a></li>
+                <!-- MOBILE FRIENDLY  -->
+                <li ng-show='blend.user' class='hide-on-med-and-up'><a class="dropdown-button nav-link" href="#!" data-activates="dropdown2"><i class="material-icons right">arrow_drop_down</i></a></li>
               </ul>
             </div>
           </nav>
