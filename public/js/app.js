@@ -12,9 +12,28 @@
         return $http({
           url: `${rootUrl}/users/current-user`,
           method: 'GET',
-          headers: {'Authorization': `Bearer ${JSON.stringify}`}
+          headers: {'Authorization': `Bearer ${JSON.stringify(localStorage.getItem('token'))}`}
+        })
+        .then(function(response) {
+          self.user = response.data.user;
+          self.id = response.data.user.id;
+          console.log(self.user, 'currentUser function');
+        })
+        .then(function(response) {
+          return $http({
+            url: `${rootUrl}/users/${self.id}/color_schemes`,
+            method: 'GET'
+          })
+        })
+        .then(function(response) {
+          console.log(response);
+          self.colorSchemes = response.data.colorSchemes;
+        })
+        .catch(function(err) {
+          console.log(err);
         })
       }
+      self.currentUser()
 
       this.signup = function(user) {
         console.log(user, 'user');
@@ -61,7 +80,6 @@
           console.log(self.id, 'id of current user');
           console.log('token ---->', response.data.token);
           localStorage.setItem('token', JSON.stringify(response.data.token))
-          localStorage.setItem('user_id', JSON.stringify(response.data.user.id));
             $state.go('blend', {url: '/blend', user: response.data.user})
         })
         .then(function(response) {
@@ -85,8 +103,6 @@
         self.success = null;
         self.repeatText = "";
         localStorage.removeItem('token');
-        localStorage.removeItem('user');
-        localStorage.removeItem('id');
         $state.go('home', {url: '/'});
       }
 
