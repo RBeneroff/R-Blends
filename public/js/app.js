@@ -8,6 +8,14 @@
 
 // USER FUNCTIONS
 
+      this.currentUser = function() {
+        return $http({
+          url: `${rootUrl}/users/current-user`,
+          method: 'GET',
+          headers: {'Authorization': `Bearer ${JSON.stringify}`}
+        })
+      }
+
       this.signup = function(user) {
         console.log(user, 'user');
         self.signed = user;
